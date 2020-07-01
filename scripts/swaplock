@@ -1,0 +1,6 @@
+#!/bin/sh
+
+[[ ! -f $LOCKWALL_DIR ]] && echo "\$LOCKWALL_DIR not found" && exit 1
+[[ ! -d $WALLPAPERS_DIR ]] && echo "\$WALLPAPERS_DIR not found" && exit 1
+
+sxiv -tro $WALLPAPERS_DIR | xargs -I{} cp -f {} $LOCKWALL_DIR && echo 'done'

@@ -1,0 +1,5 @@
+#!/bin/sh
+
+muted=$(pacmd list-sinks | grep -E '^*' | grep muted | cut -d ':' -f2)
+
+[[ "$muted" == " no" ]] && echo 0 || echo 1

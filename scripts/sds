@@ -1,0 +1,4 @@
+pactl set-default-sink $@
+
+pulseaudio -k
+pulseaudio --check

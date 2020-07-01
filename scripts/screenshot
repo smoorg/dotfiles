@@ -1,0 +1,6 @@
+#!/bin/sh
+filename=~/images/screenshots/$(date +"%Y-%m-%d_%H:%M:%S").png
+#scrot -q 100 -sf $filename -e 'xclip -selection clipboard -target image/png -i $f' && notify-send 'Screenshot saved!' '$filename created' &
+#wait %1
+maim -s $filename | xclip -selection clipboard -target image/png && notify-send 'Screenshot saved!' "$filename created" &
+

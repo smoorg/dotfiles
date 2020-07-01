@@ -1,0 +1,4 @@
+#!/bin/sh
+
+eval `ssh-agent` &
+ssh-add $HOME/.ssh/azure_rsa &

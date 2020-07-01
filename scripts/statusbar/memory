@@ -1,0 +1,3 @@
+#!/bin/sh
+
+free --si -h | grep Pam | awk '{print " " $3"/"$2}'
