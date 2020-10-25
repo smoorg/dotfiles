@@ -1,19 +1,5 @@
 #!/bin/sh
-
-if [[ "$1" -eq "" ]]; then
-	echo Provide device id to be toggled
-	read deviceid
-else
-	deviceid=$1
-fi
-
-exists=$(xinput list | grep pointer | awk -F'[=[]' '{print $2}'| grep $deviceid)
-
-if [[ $exists -eq "" ]]; then
-	echo "no such device"
-	exit 1
-fi
-
+deviceid=$(xinput list | grep 'ALP0016' | awk -F'[=[]' '{print $2}')
 prop=$(xinput list-props $deviceid | grep Enabled | awk -F'[()]' '{print $2}')
 enabled=$(xinput list-props $deviceid | grep Enabled | awk '{print $4}')
 

@@ -6,5 +6,5 @@ outputs=$(xrandr | grep -v $defaultOutput | grep -e [^s]connected | awk '{print 
 
 for output in $outputs; do
 	xrandr --output $output --auto --left-of $defaultOutput
-	swapwall
+	setwall
 done

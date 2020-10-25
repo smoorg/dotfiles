@@ -1,11 +1,13 @@
 #!/bin/sh
-
 author=$1
 url=$2
+
 [ -z "$author" ] && echo "Missing author name" && exit 1
 [ -z "$url"  ] && echo "Missing url" && exit 1
 
-dir=~/music/podcasts/youtube/$author
+[[ -d $MEDIA_DIR ]] && media_dir=$MEDIA_DIR/music || $(echo 'global MEDIA_DIR variable missing' && exit 1)
+
+dir=$media_dir/podcasts/youtube/$author
 mkdir -p $dir
 cd $dir
 
@@ -16,6 +18,7 @@ youtube-dl -f bestaudio $url
 echo "Preprocessing..."
 
 find . -type f -iname "*.webm" -exec bash -c 'FILE="$1"; ffmpeg -i "${FILE}" -vn -ab 128k -ar 44100 -y "${FILE%.webm}.mp3";' _ '{}' \;
+
 echo "Removing webm leftovers..."
 rm *.webm*
 

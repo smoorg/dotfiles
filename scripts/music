@@ -1,1 +1,3 @@
-ncmpcpp -c /home/matr/.config/ncmpcpp/ncmpcpp.conf
+#!/bin/sh
+
+mpc update --wait && ncmpcpp -c /home/matr/.config/ncmpcpp/ncmpcpp.conf
