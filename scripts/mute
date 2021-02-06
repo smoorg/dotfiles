@@ -2,20 +2,11 @@
 
 sinkid=$1
 
-
-toggle_mute() {
-	is_muted=$(muted $1)
-	mute=0 
-	[[ "$is_muted" == "0" ]] && mute=1
-
-	pacmd set-sink-mute $1 $mute
-}
-
-[[ -z $sinkid ]] && echo "sink id is required to mute it!" && exit 1;
+[[ -z $sinkid ]] && sinkid=$(currsink);
 
 sinkids=$(pacmd list-sinks | grep -e 'index' | awk -F': ' '{print $2}')
 
-[[ "$sinkids" =~ "$sinkid" ]] && toggle_mute $sinkid || echo "sink not found"; exit 2
+[[ "$sinkids" =~ "$sinkid" ]] && pactl set-sink-mute $sinkid toggle || echo "sink not found"; exit 2
 
 
 

@@ -1,0 +1,27 @@
+#!/bin/sh
+
+# configurations
+export PATH=$PATH:/usr/local/share/scripts:/usr/local/games:/usr/local/bin:$HOME/.dotnet/tools
+
+export TERM='xterm'
+export LANG=pl_PL.UTF-8
+export LC_ALL=pl_PL.UTF-8
+
+# xdg
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+
+# ssh
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+export SUDO_ASKPASS='/usr/lib/ssh/x11-ssh-askpass'
+
+# app specific
+export LYNX_CFG=$HOME/.config/lynx/lynx.cfg
+export MPD_HOST=/home/matr/.local/share/mpd/socket
+
+# directories
+export SCRIPTS_DIR=$HOME/scripts
+export WALLPAPER_DIR=$HOME/.local/wallpaper.png
+export WALLPAPERS_DIR=$HOME/images/wallpapers/
+export MEDIA_DIR=$HOME/Music
+

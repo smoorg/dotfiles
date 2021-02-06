@@ -1,7 +1,0 @@
-#!/bin/bash
-
-capacity=$(acpi | awk '{print $4}' | sed "s/[A-z,:%]//g")
-
-[[ $capacity -lt "20" ]] && \
-	XDG_RUNTIME_DIR=/run/user/$(id -u) \
-	/usr/bin/notify-send "Low Battery" "Battery level is $capacity"

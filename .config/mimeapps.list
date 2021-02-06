@@ -1,0 +1,9 @@
+[Added Associations]
+text/x-log=nvim.desktop;firefox.desktop;
+application/x-shellscript=nautilus-autorun-software.desktop;
+application/json=nvim.desktop;
+
+[Default Applications]
+x-scheme-handler/postman=Postman.desktop
+video/x-matroska=mpv.desktop
+video/*=mpv.desktop

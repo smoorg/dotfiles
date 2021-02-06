@@ -1,17 +1,8 @@
 #!/bin/sh
-
+setxkbmap pl
 # dirs
-export PATH=$PATH:$HOME/scripts:/usr/local/games
-export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_DATA_HOME="$HOME/.local/share"
-export SCRIPTS_DIR=$HOME/scripts
-export WALLPAPER_DIR=$HOME/.local/wallpaper/bg.png
-export WALLPAPERS_DIR=$HOME/images/wallpapers/
-export LOCKWALL_DIR=/usr/share/slick-greeter/background.jpg
-export MEDIA_DIR=/media
-# devices
-export TOUCHPAD_ID=14
+
+#source $HOME/.bashrc
 
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
@@ -33,7 +24,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 # source scripts
-[ -d "$SCRIPTS_DIR" ] && source $SCRIPTS_DIR/**/*
+#[ -d "$SCRIPTS_DIR" ] && source $SCRIPTS_DIR/**/*
 
 # external monitor
 [ -x $SCRIPTS_DIR/conmon ] && $SCRIPTS_DIR/conmon
@@ -41,22 +32,15 @@ fi
 # background
 [ -f $WALLPAPER_DIR ] && [ -x $SCRIPTS_DIR/setwall ] && $SCRIPTS_DIR/setwall &
 
-# statusbar
- while true; do content=$(stbar); xsetroot -name "$content"; sleep 1s; done &
-
-
 # notifications process
 dunst > /dev/null 2>&1 &
 
 # transparency
 xcompmgr &
 
-# screen rotator daemon
-screenrotator &
-
-#dwmblocks &
+dwmblocks &
 
 # window manager
-	#java param to work with webstorm 
-export _JAVA_AWT_WM_NONREPARENTING=1 
-exec dwm
+#java param to work with webstorm 
+export _JAVA_AWT_WM_NONREPARENTING=1
+exec /usr/local/bin/dwm

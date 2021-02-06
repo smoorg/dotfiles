@@ -1,17 +1,18 @@
 #!/bin/sh
 
 # dirs
-export PATH=$PATH:$HOME/scripts:/usr/local/games
+export PATH=$PATH:/usr/local/share/scripts:/usr/local/games:usr/local/bin
+
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
-export SCRIPTS_DIR=$HOME/scripts
-export WALLPAPER_DIR=$HOME/.local/wallpaper/bg.png
+export SCRIPTS_DIR=/usr/local/share/scripts #$HOME/.local/share/scripts #/usr/local/scripts
+export WALLPAPER_DIR=$HOME/.local/share/wallpaper.png
 export WALLPAPERS_DIR=$HOME/images/wallpapers/
-export LOCKWALL_DIR=/usr/share/slick-greeter/background.jpg
-export MEDIA_DIR=/media
+export MEDIA_DIR=$HOME/Music
+
 # devices
-export TOUCHPAD_ID=14
+#export TOUCHPAD_ID=14
 
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
@@ -40,22 +41,3 @@ fi
 
 # background
 [ -f $WALLPAPER_DIR ] && [ -x $SCRIPTS_DIR/setwall ] && $SCRIPTS_DIR/setwall &
-
-# statusbar
- while true; do content=$(stbar); xsetroot -name "$content"; sleep 1s; done &
-
-
-# notifications process
-dunst > /dev/null 2>&1 &
-
-# transparency
-xcompmgr &
-
-# screen rotator daemon
-screenrotator &
-
-#dwmblocks &
-
-# window manager
-	#java param to work with webstorm 
-_JAVA_AWT_WM_NONREPARENTING=1 dwm
