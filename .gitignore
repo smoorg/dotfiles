@@ -1,1 +1,126 @@
-copy.sh
+# cache
+.cache
+.castget/
+.mozilla/
+.config/Postman/
+.config/newsboat/cache.db
+.pulse-cookie
+
+# installed plugins
+.config/nvim/plugged
+
+# dev environment
+.yarnrc
+.yarn/
+.npm/
+.java/
+
+# steam
+.config/paradox-launcher-v2/
+.config/unity3d
+.steam/
+.paradoxlauncher/
+.steampath
+.steampid
+.local/share/Steam/
+.local/share/Paradox\ Interactive/
+.local/share/vulkan/
+
+# csharp configs
+.aspnet/
+.dotnet/
+.mono/
+.nuget/
+.vsts/
+.local/share/NuGet/
+
+# dotnet templates cache
+.templateengine/
+
+# audio
+.config/pulse/
+.config/pavucontrol.ini
+.config/pipewire-media-session/
+.config/mpd
+.ncmpcpp/
+mpv/
+
+# garbage
+.config/autostart
+.config/configstore
+.config/coc
+.config/gtk-2.0
+.config/gtk-3.0
+.config/gnome-*
+.local/share/gnome*
+.config/QtProject.conf
+
+.electron-gyp/
+.gnome
+.Xauthority
+
+# JetBrains
+.config/JetBrains/
+WebstormProjects/
+.local/share/JetBrains
+
+# Freetube files
+freetube/
+freetube-bin/
+.config/FreeTube/
+
+# history files
+.bash_history
+.python_history
+.sqlite_history
+.lesshst
+.node_repl_history
+
+# private config
+.config/rclone
+.config/skypeforlinux
+.mozilla/
+.password-store/
+.purple/
+.gnupg
+
+# mail files
+.config/mutt/
+.config/neomutt/
+.config/msmtp
+mail/
+.mbsyncrc
+.notmuch-config
+
+# private files
+Desktop/
+Documents/
+Downloads/
+KeePass/
+Music/
+Pictures/
+programs/
+repos/
+scripts/
+images/
+OneDrive/
+Videos/
+
+.local/
+
+# ignore secret files ALWAYS
+.ssh/
+.config/keepassxc
+.config/keepass
+*.gpg
+*.rsa
+*_rsa
+*.kdbx
+*.key
+
+# log files
+*.log
+
+# nvidia
+.nv/
+.nvidia-settings-rc
