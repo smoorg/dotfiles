@@ -2,8 +2,19 @@
 text/x-log=nvim.desktop;firefox.desktop;
 application/x-shellscript=nautilus-autorun-software.desktop;
 application/json=nvim.desktop;
+application/rss+xml=firefox.desktop;
 
 [Default Applications]
 x-scheme-handler/postman=Postman.desktop
 video/x-matroska=mpv.desktop
 video/*=mpv.desktop
+x-scheme-handler/rdp=org.remmina.Remmina.desktop
+x-scheme-handler/spice=org.remmina.Remmina.desktop
+x-scheme-handler/vnc=org.remmina.Remmina.desktop
+x-scheme-handler/remmina=org.remmina.Remmina.desktop
+application/x-remmina=org.remmina.Remmina.desktop
+application/pdf=xreader.desktop
+image/jpeg=sxiv.desktop
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
+text/html=firefox.desktop
