@@ -1,21 +1,24 @@
 call plug#begin('$XDG_CONFIG_HOME/nvim/plugged')
-"	Plug 'Shougo/deoplete.nvim' " , { 'do': ':UpdateRemotePlugins' }
 	Plug 'moll/vim-bbye' 			" buffer enhancement
 	Plug 'preservim/nerdtree'		" sidebar
-	"Plug 'tpope/vim-surround'		" emmet
-	"Plug 'bling/vim-airline'
-	"Plug 'scrooloose/nerdcommenter'		" comments
-	"Plug 'jiangmiao/auto-pairs'
+	Plug 'Xuyuanp/nerdtree-git-plugin'
+	Plug 'scrooloose/nerdcommenter'		" comments
 
+" look and feel
+	Plug 'bling/vim-airline'
 	Plug 'rafi/awesome-vim-colorschemes'	" themes
+	Plug 'itchyny/lightline'
 
-"	Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
-Plug 'neoclide/coc.nvim', { 'branch': 'release' } 		" autocompletion
+" support languages
+	Plug 'neoclide/coc.nvim', { 'branch': 'release' } 		
 	Plug 'neoclide/coc-tsserver'
-"	Plug 'ianks/vim-tsx' 			" tsx format recognize
-"	Plug 'leafgarland/typescript-vim' 	" typescript checker
+	"Plug 'neoclide/coc-omnisharp'
+	Plug 'OmniSharp/omnisharp-vim'
+
+"	file namanger
 	Plug 'rbgrouleff/bclose.vim'		" ranger needs it
 	Plug 'francoiscabrol/ranger.vim'	" file manager
 
+	Plug 'vimwiki/vimwiki', { 'branch': 'master' }
 call plug#end()
 

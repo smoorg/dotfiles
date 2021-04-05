@@ -5,13 +5,13 @@ syntax on
 
 set pyx=3
 
-source $HOME/.config/nvim/general/keys.vim
+source $XDG_CONFIG_HOME/nvim/general/keys.vim
+source $XDG_CONFIG_HOME/nvim/call-plugins.vim
 
-source $HOME/.config/nvim/call-plugins.vim
+for f in split(glob('~/.config/nvim/configs/*.vim', '\n'))
+	exe 'source' f
+endfor
 
-source $HOME/.config/nvim/configs/nerd-tree.vim
-" source $HOME/.config/nvim/configs/ycm.vim
-source $HOME/.config/nvim/configs/coc.vim
 colorscheme molokai 
 
 " TYPESCRIPT
