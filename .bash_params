@@ -1,16 +1,16 @@
 #!/bin/sh
 
 # configurations
-export PATH=$PATH:/usr/local/share/scripts:/usr/local/games:/usr/local/bin:$HOME/.dotnet/tools
+export PATH=$PATH:/usr/local/games:/usr/local/bin:$HOME/.dotnet/tools:export:$(find $HOME/scripts -type d -printf %p:)
 
 export TERM='xterm'
 export LANG=pl_PL.UTF-8
 export LC_ALL=pl_PL.UTF-8
-
+export EDITOR='nvim'
 # xdg
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
-
+export NOTMUCH_CONFIG="$HOME/.config/notmuch-config"
 # ssh
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export SUDO_ASKPASS='/usr/lib/ssh/x11-ssh-askpass'
