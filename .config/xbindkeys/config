@@ -37,17 +37,17 @@
 #keystate_capslock = enable
 #keystate_scrolllock= enable
 
-"~/scripts/sound down"
-	XF86AudioLowerVolume
-"~/scripts/sound up"
-	XF86AudioRaiseVolume
-"~/scripts/light 5"
-	XF86MonBrightnessUp
-"~/scripts/light -5"
-	XF86MonBrightnessDown
+#"~/scripts/sound down"
+#	XF86AudioLowerVolume
+#"~/scripts/sound up"
+#	XF86AudioRaiseVolume
+#"~/scripts/light 5"
+#	XF86MonBrightnessUp
+#"~/scripts/light -5"
+#	XF86MonBrightnessDown
 "~/scripts/touchtog 14"
 	Mod1 + F2
-"sh -c '~/scripts/screenshot'"
-	Mod1 + Shift + S	
-"dm-tool lock"
-	Mod1 + L
+#"sh -c '~/scripts/screenshot'"
+#	Mod1 + Shift + S	
+#"dm-tool lock"
+#	Mod1 + L
