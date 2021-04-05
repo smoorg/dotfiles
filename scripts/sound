@@ -1,9 +1,14 @@
 #!/bin/bash
 
 current_sink=$(currsink)
+curr_volume=$($SCRIPTS_DIR/volume)
+curr_volume=${curr_volume%%%}
 
 if [[ ! -z "$(pgrep -x pulseaudio)" ]]; then
-	up() { pactl set-sink-volume "$current_sink" +5%; }
+	up() {
+		[ "$curr_volume" -gt 99 ] && exit 0;
+		pactl set-sink-volume "$current_sink" +5%;
+	}
 	down() { pactl set-sink-volume "$current_sink" -5%; }
 else
 	up() { amixer set 'Master' 5%+; }
@@ -14,7 +19,5 @@ case "$1" in
 	up) up ;;
 	down) down ;;
 esac >/dev/null
-
-curr_volume=$($SCRIPTS_DIR/volume)
 
 notify-send "Sound $1" "Sound $1 by 5% to $curr_volume"

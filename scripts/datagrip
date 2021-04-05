@@ -1,0 +1,3 @@
+#!/bin/sh
+
+sh -c ~/programs/JetBrains/DataGrip-2021.1/bin/datagrip.sh
