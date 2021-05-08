@@ -1,5 +1,5 @@
 #!/bin/sh
-filename=~/images/screenshots/$(date +"%Y-%m-%d_%H:%M:%S").png
+filename=~/Pictures/images/screenshots/$(date +"%Y-%m-%d_%H:%M:%S").png
 
 if [ "$1" = "-s" ]; then
 	maim $@ $filename | xclip -selection clipboard -target image/png

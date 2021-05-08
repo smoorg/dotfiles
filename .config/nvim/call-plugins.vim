@@ -7,7 +7,7 @@ call plug#begin('$XDG_CONFIG_HOME/nvim/plugged')
 " look and feel
 	Plug 'bling/vim-airline'
 	Plug 'rafi/awesome-vim-colorschemes'	" themes
-	Plug 'itchyny/lightline'
+	"	Plug 'itchyny/lightline'
 
 " support languages
 	Plug 'neoclide/coc.nvim', { 'branch': 'release' } 		
@@ -20,5 +20,10 @@ call plug#begin('$XDG_CONFIG_HOME/nvim/plugged')
 	Plug 'francoiscabrol/ranger.vim'	" file manager
 
 	Plug 'vimwiki/vimwiki', { 'branch': 'master' }
+
+" telescope
+ 	Plug 'nvim-lua/popup.nvim'
+	Plug 'nvim-lua/plenary.nvim'
+	Plug 'nvim-telescope/telescope.nvim'
 call plug#end()
 
