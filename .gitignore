@@ -32,6 +32,7 @@
 .mono/
 .nuget/
 .vsts/
+.config/dotnet-tools.json
 .local/share/NuGet/
 
 # dotnet templates cache
@@ -49,15 +50,19 @@ mpv/
 .config/autostart
 .config/configstore
 .config/coc
+.config/chromium
+.config/QtProject.conf
+
+# electron garbage
+.config/Electron
+.electron-gyp/
+
+# gnome garbage
 .config/gtk-2.0
 .config/gtk-3.0
 .config/gnome-*
 .local/share/gnome*
-.config/QtProject.conf
-
-.electron-gyp/
 .gnome
-.Xauthority
 
 # JetBrains
 .config/JetBrains/
@@ -84,10 +89,18 @@ freetube-bin/
 .purple/
 .gnupg
 
+# remmina
+.config/remmina
+.config/freerdp
+remmina_log
+
 # mail files
+.abook/
+.config/abook
 .config/mutt/
-.config/neomutt/
 .config/msmtp
+.config/neomutt/
+.config/notmuch-config
 mail/
 .mbsyncrc
 .notmuch-config
@@ -101,7 +114,6 @@ Music/
 Pictures/
 programs/
 repos/
-scripts/
 images/
 OneDrive/
 Videos/
