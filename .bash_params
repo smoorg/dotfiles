@@ -18,7 +18,7 @@ export SUDO_ASKPASS='/usr/lib/ssh/x11-ssh-askpass'
 # app specific
 export LYNX_CFG=$HOME/.config/lynx/lynx.cfg
 export MPD_HOST=/home/matr/.local/share/mpd/socket
-
+export CHROME_BIN=/usr/bin/chromium
 # directories
 export SCRIPTS_DIR=$HOME/scripts
 export WALLPAPER_DIR=$HOME/.local/wallpaper.png
