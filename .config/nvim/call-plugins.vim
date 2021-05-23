@@ -1,25 +1,35 @@
 call plug#begin('$XDG_CONFIG_HOME/nvim/plugged')
-	Plug 'moll/vim-bbye' 			" buffer enhancement
-	Plug 'preservim/nerdtree'		" sidebar
+" buffer enhancement
+	Plug 'moll/vim-bbye'
+" sidebar
+	Plug 'preservim/nerdtree'
 	Plug 'Xuyuanp/nerdtree-git-plugin'
-	Plug 'scrooloose/nerdcommenter'		" comments
+	Plug 'jistr/vim-nerdtree-tabs'
+" comments
+	Plug 'scrooloose/nerdcommenter'
 
 " look and feel
 	Plug 'bling/vim-airline'
-	Plug 'rafi/awesome-vim-colorschemes'	" themes
-	"	Plug 'itchyny/lightline'
+" themes
+	Plug 'rafi/awesome-vim-colorschemes'
+	"Plug 'itchyny/lightline'
 
 " support languages
-	Plug 'neoclide/coc.nvim', { 'branch': 'release' } 		
+	Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 	Plug 'neoclide/coc-tsserver'
 	"Plug 'neoclide/coc-omnisharp'
 	Plug 'OmniSharp/omnisharp-vim'
 
-"	file namanger
-	Plug 'rbgrouleff/bclose.vim'		" ranger needs it
-	Plug 'francoiscabrol/ranger.vim'	" file manager
+" debugging
+	Plug 'puremourning/vimspector'
+	Plug 'szw/vim-maximizer'
 
-	Plug 'vimwiki/vimwiki', { 'branch': 'master' }
+" file mananger
+	Plug 'rbgrouleff/bclose.vim'
+	" ranger needs it
+	Plug 'francoiscabrol/ranger.vim'
+
+	Plug 'vimwiki/vimwiki'
 
 " telescope
  	Plug 'nvim-lua/popup.nvim'
