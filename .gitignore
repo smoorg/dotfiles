@@ -1,15 +1,19 @@
 # cache
 .cache
 .castget/
+.texlive/
 .mozilla/
 .pulse-cookie
+.wget-hsts
 
 # dev environment
+.angular-config.json
+.cmake/
+.java/
 .npmrc
+.npm/
 .yarnrc
 .yarn/
-.npm/
-.java/
 
 # steam
 .steam/
@@ -46,19 +50,27 @@ mpv/
 WebstormProjects/
 .local/share/JetBrains
 
+# CodeTogether
+.codetogether/
+.ctsystem
+
 # Freetube files
 freetube/
 freetube-bin/
 
 # history files
-.bash_history
 .python_history
 .sqlite_history
 .lesshst
 .node_repl_history
 
-# private config
+# bash files
+.Xauthority
+.bash_history
+.bash_logout
 .bash_aliases_priv
+
+# private config
 .config/
 .gnupg
 .mozilla/
@@ -86,7 +98,7 @@ repos/
 images/
 OneDrive/
 Videos/
-
+DAW/
 .local/
 
 # ignore secret files ALWAYS
@@ -103,3 +115,7 @@ Videos/
 # nvidia
 .nv/
 .nvidia-settings-rc
+
+# nvim/vim cache
+.vim/
+.viminfo
