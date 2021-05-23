@@ -2,22 +2,16 @@
 .cache
 .castget/
 .mozilla/
-.config/Postman/
-.config/newsboat/cache.db
 .pulse-cookie
 
-# installed plugins
-.config/nvim/plugged
-
 # dev environment
+.npmrc
 .yarnrc
 .yarn/
 .npm/
 .java/
 
 # steam
-.config/paradox-launcher-v2/
-.config/unity3d
 .steam/
 .paradoxlauncher/
 .steampath
@@ -32,47 +26,29 @@
 .mono/
 .nuget/
 .vsts/
-.config/dotnet-tools.json
 .local/share/NuGet/
 
 # dotnet templates cache
 .templateengine/
 
 # audio
-.config/pulse/
-.config/pavucontrol.ini
-.config/pipewire-media-session/
-.config/mpd
 .ncmpcpp/
 mpv/
 
-# garbage
-.config/autostart
-.config/configstore
-.config/coc
-.config/chromium
-.config/QtProject.conf
-
 # electron garbage
-.config/Electron
 .electron-gyp/
 
 # gnome garbage
-.config/gtk-2.0
-.config/gtk-3.0
-.config/gnome-*
 .local/share/gnome*
 .gnome
 
 # JetBrains
-.config/JetBrains/
 WebstormProjects/
 .local/share/JetBrains
 
 # Freetube files
 freetube/
 freetube-bin/
-.config/FreeTube/
 
 # history files
 .bash_history
@@ -82,25 +58,18 @@ freetube-bin/
 .node_repl_history
 
 # private config
-.config/rclone
-.config/skypeforlinux
+.bash_aliases_priv
+.config/
+.gnupg
 .mozilla/
 .password-store/
 .purple/
-.gnupg
 
 # remmina
-.config/remmina
-.config/freerdp
 remmina_log
 
 # mail files
 .abook/
-.config/abook
-.config/mutt/
-.config/msmtp
-.config/neomutt/
-.config/notmuch-config
 mail/
 .mbsyncrc
 .notmuch-config
@@ -122,8 +91,6 @@ Videos/
 
 # ignore secret files ALWAYS
 .ssh/
-.config/keepassxc
-.config/keepass
 *.gpg
 *.rsa
 *_rsa
