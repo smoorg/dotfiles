@@ -35,6 +35,9 @@ fi
 # notifications process
 dunst > /dev/null 2>&1 &
 
+# start bluetooth
+bluetoothctl power on
+
 # transparency
 xcompmgr &
 
