@@ -1,6 +1,6 @@
 let mapleader = " "
 
-map <A-Left> :bp<CR>
+map <A-Left> :bdelete<CR>
 
 " Close buffer and remove it from list
 "nmap <C-w> :Bdelete<CR>
