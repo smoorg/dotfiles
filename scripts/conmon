@@ -5,6 +5,6 @@ defaultOutput="eDP1"
 outputs=$(xrandr | grep -v $defaultOutput | grep -e [^s]connected | awk '{print $1}')
 
 for output in $outputs; do
-	xrandr --output $output --auto --left-of $defaultOutput
+	xrandr --output $output --auto --right-of $defaultOutput
 	setwall
 done
