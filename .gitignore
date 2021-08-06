@@ -60,7 +60,9 @@ freetube-bin/
 
 # history files
 .python_history
+.mysql_history
 .sqlite_history
+.nmcli_history
 .lesshst
 .node_repl_history
 
