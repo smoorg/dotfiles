@@ -15,9 +15,11 @@ find_main_folder="/home"
 tmp_copy_dir="/tmp"
 
 # directory for backups
-backup_dir="$HOME/.local/share/kpm/backups"
+backup_dir="$HOME/.local/share/kcs/backups"
 backup_file_name="$(date +%F_%H:%M:%S).kdbx" # i.e. 2020-02-02_13:14:59.kdbx
 backup_full_dir="$backup_dir/$backup_file_name"
+
+[ -d "$backup_dir" ] || echo "created" mkdir -p $backup_dir
 
 # list remotes and pick one
 remote=$(rclone listremotes | sed 's/://g' | fzf --header='Provide remote name')
@@ -30,8 +32,11 @@ remote_file=$(rclone lsl "onedrive:" --include "*.kdbx" --max-depth 2 | awk '{pr
 local_file=$(find $find_main_folder -iname "*.kdbx" |\
 	fzf --header="Pick which local db to merge with $remote:$remote_file")
 
+echo "download"
 # downloads the file to tmp dir
 rclone copy -v "$remote:$remote_file" "$tmp_copy_dir"
+
+echo"download finished"
 
 read -n 1 -p 'Do you want to backup current db? y/n (default: n)' yn
 echo
@@ -49,10 +54,17 @@ fi
 read -n 1 -p 'Do you want to use key file? y/n (default: n)' has_key
 echo
 
+echo "Merging..."
+
 [ "$has_key" = y ] &&\
 	key=$(find $find_main_folder | fzf --header="Provide a key file") &&\
 	keepassxc-cli merge $local_file "$tmp_copy_dir/$remote_file" --same-credentials -k $key ||\
 	keepassxc-cli merge $local_file "$tmp_copy_dir/$remote_file" --same-credentials
 
+echo "Merge done!"
+
+echo "Uploading..."
 # uploads merged database to cloud
 rclone copy -v "$local_file" "$remote:"
+
+echo "Uploading done!"
