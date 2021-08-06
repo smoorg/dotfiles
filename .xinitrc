@@ -29,6 +29,7 @@ fi
 # external monitor
 [ -x $SCRIPTS_DIR/conmon ] && $SCRIPTS_DIR/conmon
 
+[ -x $SCRIPTS_DIR/statusbar/dwmbar ] && $SCRIPTS_DIR/statusbar/dwmbar &
 # background
 [ -f $WALLPAPER_DIR ] && [ -x $SCRIPTS_DIR/setwall ] && $SCRIPTS_DIR/setwall &
 
