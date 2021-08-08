@@ -37,7 +37,7 @@ fi
 dunst > /dev/null 2>&1 &
 
 # start bluetooth
-bluetoothctl power on
+bluetoothctl power on &
 
 # transparency
 xcompmgr &
