@@ -5,6 +5,10 @@
 .mozilla/
 .pulse-cookie
 .wget-hsts
+.zoom
+.hasura
+.pki
+.surf
 
 # dev environment
 .angular-config.json
@@ -47,6 +51,7 @@ mpv/
 .gnome
 
 # JetBrains
+CLionProjects/
 WebstormProjects/
 .local/share/JetBrains
 
@@ -74,6 +79,7 @@ freetube-bin/
 
 # private config
 .config/
+scripts/local/
 .gnupg
 .mozilla/
 .password-store/
@@ -83,10 +89,11 @@ freetube-bin/
 remmina_log
 
 # mail files
-.abook/
-mail/
 .mbsyncrc
 .notmuch-config
+.abook/
+mail/
+sent/
 
 # private files
 Desktop/
@@ -121,3 +128,4 @@ DAW/
 # nvim/vim cache
 .vim/
 .viminfo
+.NERDTree*
