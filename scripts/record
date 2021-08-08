@@ -1,5 +1,5 @@
 #!/bin/bash
-
-[ -z "$1" ] && echo "no filename provided" && exit 1
+filename=$1
+[ -z "$1" ] && filename="$(date +"%Y-%m-%dT%H-%M-%S").mp4"
 geometry=$(slop -f "-video_size %wx%h -i :0.0+%x,%y")
-ffmpeg -framerate 30 -f x11grab $geometry "$1"
+ffmpeg -framerate 30 -f x11grab $geometry "$filename"
