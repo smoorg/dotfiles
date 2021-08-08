@@ -3,6 +3,7 @@ text/x-log=nvim.desktop;firefox.desktop;
 application/x-shellscript=nautilus-autorun-software.desktop;
 application/json=nvim.desktop;
 application/rss+xml=firefox.desktop;
+application/octet-stream=firefox.desktop;
 
 [Default Applications]
 x-scheme-handler/postman=Postman.desktop
