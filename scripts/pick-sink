@@ -1,0 +1,4 @@
+#!/bin/sh
+sink=$(pl | awk '{print $2}' | awk -F'.' '{print $2}' | dmenu -l 10)
+sinkid=$(pl | grep $sink | awk '{print $1}')
+sds $sinkid

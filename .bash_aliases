@@ -10,6 +10,8 @@ alias gc='git checkout'
 alias gcb='git checkout -b'
 alias gs='git status'
 alias gcm='git commit -m'
+alias gca='git commit --amend'
+alias gcane='git commit --amend --no-edit'
 alias gl="git log --color --date=iso --pretty=format:'%ad%x08%at%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08%aN %s'"
 
 #dotnet
@@ -17,7 +19,6 @@ alias dotnet-ef=$HOME/.dotnet/tools/dotnet-ef
 
 # programs
 alias vnc='remmina'
-alias pl="pactl list short sinks"
 
 alias castget='castget -C ~/.config/castget/castget.conf'
 alias news='newsboat ; pkill -RTMIN+10 dwmblocks'
