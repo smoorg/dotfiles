@@ -13,11 +13,16 @@
 # dev environment
 .angular-config.json
 .cmake/
+.docker/
 .java/
+node_modules/
 .npmrc
 .npm/
 .yarnrc
+yarn.lock
 .yarn/
+.vscode/
+.vscode-oss/
 
 # steam
 .steam/
@@ -66,6 +71,7 @@ freetube-bin/
 # history files
 .python_history
 .mysql_history
+.psql_history
 .sqlite_history
 .nmcli_history
 .lesshst
