@@ -1,5 +1,5 @@
-map <C-b> :NERDTreeMirrorToggle<CR>
-map <leader>h :NERDTreeFocus<CR>
+"map <C-b> :NERDTreeMirrorToggle<CR>
+"map <leader>h :NERDTreeFocus<CR>
 " Start NERDTree and put the cursor back in the other window.
 "autocmd VimEnter * NERDTree | wincmd p 
 
@@ -25,7 +25,7 @@ let g:NERDTreeMapOpenSplit='$'
 
 "vim-nerdtree-tabs settings :
 " Open NERDTree with vim
-let g:nerdtree_tabs_open_on_console_startup=0
+"let g:nerdtree_tabs_open_on_console_startup=0
 " Open NERDTree in the new tabs
 let g:nerdtree_tabs_open_on_new_tab=0
 let g:nerdtree_tabs_meaningful_tab_names=1

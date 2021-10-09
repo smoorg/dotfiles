@@ -5,10 +5,10 @@ syntax on
 
 set pyx=3
 
-source $XDG_CONFIG_HOME/nvim/general/keys.vim
+source $XDG_CONFIG_HOME/nvim/keys.vim
 source $XDG_CONFIG_HOME/nvim/call-plugins.vim
 
-for f in split(glob('~/.config/nvim/configs/*.vim', '\n'))
+for f in split(glob("$XDG_CONFIG_HOME/nvim/configs/*.vim", '\n'))
 	exe 'source' f
 endfor
 
@@ -20,3 +20,7 @@ colorscheme molokai
 	au BufNewFile,BufRead *.tsx setlocal filetype=typescript.tsx
 
 
+nmap <C-T> :tabnew<CR>
+nmap <leader>w <cmd>tabclose<CR>
+nmap <C-l> :tabnext<CR>
+nmap <C-h> :tabprevious<CR>

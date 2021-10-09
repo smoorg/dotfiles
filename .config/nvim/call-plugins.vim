@@ -2,9 +2,9 @@ call plug#begin('$XDG_CONFIG_HOME/nvim/plugged')
 " buffer enhancement
 	Plug 'moll/vim-bbye'
 " sidebar
-	Plug 'preservim/nerdtree'
-	Plug 'Xuyuanp/nerdtree-git-plugin'
-	Plug 'jistr/vim-nerdtree-tabs'
+"	Plug 'preservim/nerdtree'
+"	Plug 'Xuyuanp/nerdtree-git-plugin'
+"	Plug 'jistr/vim-nerdtree-tabs'
 " comments
 	Plug 'scrooloose/nerdcommenter'
 
@@ -17,8 +17,8 @@ call plug#begin('$XDG_CONFIG_HOME/nvim/plugged')
 " support languages
 	Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 	Plug 'neoclide/coc-tsserver'
-	"Plug 'neoclide/coc-omnisharp'
-	Plug 'OmniSharp/omnisharp-vim'
+	"Plug 'coc-extensions/coc-omnisharp'
+	"Plug 'OmniSharp/omnisharp-vim'
 
 " debugging
 	Plug 'puremourning/vimspector'
