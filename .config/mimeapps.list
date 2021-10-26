@@ -4,6 +4,7 @@ application/x-shellscript=nautilus-autorun-software.desktop;
 application/json=nvim.desktop;
 application/rss+xml=firefox.desktop;
 application/octet-stream=firefox.desktop;
+text/markdown=sxiv.desktop;
 
 [Default Applications]
 x-scheme-handler/postman=Postman.desktop
