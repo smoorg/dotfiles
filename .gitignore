@@ -84,7 +84,8 @@ freetube-bin/
 .bash_aliases_priv
 
 # private config
-.config/
+.config
+!.config/nvim/*.vim
 scripts/local/
 .gnupg
 .mozilla/
@@ -135,3 +136,7 @@ DAW/
 .vim/
 .viminfo
 .NERDTree*
+
+# gaming
+.wine
+Games

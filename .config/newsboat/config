@@ -28,7 +28,7 @@ color article            default default
 
 browser linkhandler
 macro , open-in-browser
-macro m set browser "mpv" ; open-in-browser ; set browser linkhandler
+macro v set browser "mpv" ; open-in-browser ; set browser linkhandler
 macro f set browser "firefox" ; open-in-browser ; set browser linkhandler
 macro w set browser "lynx" ; open-in-browser ; set browser linkhandler
 # highlights
@@ -49,4 +49,6 @@ highlight article ":.*\\(embedded flash\\)$" magenta default
 #podboat
 player "mpv"
 
-ignore-article "https://rss.forsal.pl/Forsal" "content =~ \"(zdrowie|szczepionka|koronawirus)\"
+ignore-mode "display"
+ignore-article "http://rss.forsal.pl/Forsal" "content =~ \"Kaczyński| pis | PiS | PO |pandemi|szczepionk|covid|koronawirus\""
+ignore-article "http://rss.forsal.pl/Forsal" "title =~ \"Kaczyński|pis|PiS|PO|zdrowie|szczepionka|koronawirus\""
