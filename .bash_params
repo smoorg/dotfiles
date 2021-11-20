@@ -8,17 +8,17 @@ export LC_ALL=pl_PL.UTF-8
 export EDITOR='nvim'
 
 # xdg
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_DATA_HOME="$HOME/.local/share"
-export NOTMUCH_CONFIG="$HOME/.config/notmuch-config"
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_DATA_HOME=$HOME/.local/share
+export NOTMUCH_CONFIG=$HOME/.config/notmuch-config
 
 # ssh
-export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
-export SUDO_ASKPASS='/usr/lib/ssh/x11-ssh-askpass'
+export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
+export SUDO_ASKPASS=/usr/lib/ssh/x11-ssh-askpass
 
 # app specific
 export LYNX_CFG=$HOME/.config/lynx/lynx.cfg
-export MPD_HOST=/home/matr/.local/share/mpd/socket
+export MPD_HOST=$HOME/.local/share/mpd/socket
 export CHROME_BIN=/usr/bin/chromium
 
 # directories
@@ -26,4 +26,4 @@ export SCRIPTS_DIR=$HOME/scripts
 export WALLPAPER_DIR=$HOME/.local/wallpaper.png
 export WALLPAPERS_DIR=$HOME/Pictures/images/wallpapers
 export MEDIA_DIR=$HOME/Music
-export SCREENSHOT_DIR=/media/Pictures/images/screenshots
+export SCREENSHOT_DIR=$HOME/Pictures/screenshots

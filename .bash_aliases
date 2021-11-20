@@ -17,6 +17,9 @@ alias gl="git log --color --date=iso --pretty=format:'%ad%x08%at%x08%x08%x08%x08
 #dotnet
 alias dotnet-ef=$HOME/.dotnet/tools/dotnet-ef
 
+#tmux - force 256 colors mode
+alias tmux='tmux -2'
+
 # programs
 alias vnc='remmina'
 

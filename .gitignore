@@ -24,7 +24,7 @@ yarn.lock
 .vscode/
 .vscode-oss/
 
-# steam
+# gaming
 .steam/
 .paradoxlauncher/
 .steampath
@@ -32,7 +32,9 @@ yarn.lock
 .local/share/Steam/
 .local/share/Paradox\ Interactive/
 .local/share/vulkan/
-
+.wine
+Games/
+My Games/
 # csharp configs
 .aspnet/
 .dotnet/
@@ -47,6 +49,7 @@ yarn.lock
 # audio
 .ncmpcpp/
 mpv/
+.jackdrc
 
 # electron garbage
 .electron-gyp/
@@ -84,8 +87,10 @@ freetube-bin/
 .bash_aliases_priv
 
 # private config
-.config
+.config/*
 !.config/nvim/*.vim
+!.config/tmux/
+!.config/mimeapps.list
 scripts/local/
 .gnupg
 .mozilla/
@@ -137,6 +142,3 @@ DAW/
 .viminfo
 .NERDTree*
 
-# gaming
-.wine
-Games
