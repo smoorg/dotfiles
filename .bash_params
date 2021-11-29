@@ -11,6 +11,7 @@ export EDITOR='nvim'
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_DATA_HOME=$HOME/.local/share
 export NOTMUCH_CONFIG=$HOME/.config/notmuch-config
+export TMUX_CONFIG=$XDG_CONFIG_HOME/tmux
 
 # ssh
 export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
