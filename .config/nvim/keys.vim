@@ -4,7 +4,7 @@ map <A-Left> <CTRL-O>
 
 " Close buffer and remove it from list
 "nmap <C-w> :Bdelete<CR>
-nmap <C-q> :bdelete<CR>
+nmap <C-q> :bd<CR>
 
 nmap <silent> <C-Up> :wincmd k<CR>
 nmap <silent> <C-Down> :wincmd j<CR>

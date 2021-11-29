@@ -88,6 +88,8 @@ freetube-bin/
 
 # private config
 .config/*
+!.config/nvim/
+.config/nvim/plugged
 !.config/nvim/*.vim
 !.config/tmux/
 !.config/mimeapps.list
