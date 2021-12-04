@@ -47,4 +47,4 @@ dwmblocks &
 # window manager
 #java param to work with webstorm 
 export _JAVA_AWT_WM_NONREPARENTING=1
-exec /usr/local/bin/dwm
+exec ssh-agent /usr/local/bin/dwm
