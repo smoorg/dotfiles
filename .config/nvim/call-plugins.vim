@@ -7,6 +7,7 @@ call plug#begin('$XDG_CONFIG_HOME/nvim/plugged')
 "	Plug 'jistr/vim-nerdtree-tabs'
 " comments
 	Plug 'scrooloose/nerdcommenter'
+        Plug 'numToStr/Comment.nvim'
 
 " look and feel
 	Plug 'bling/vim-airline'

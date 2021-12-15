@@ -5,6 +5,8 @@ syntax on
 
 set pyx=3
 
+" make tab act as 4 spaces
+set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 
 nnoremap <SPACE> <Nop>
 let mapleader = " "
@@ -21,9 +23,3 @@ colorscheme molokai
 
 	au BufNewFile,BufRead *.ts setlocal filetype=typescript
 	au BufNewFile,BufRead *.tsx setlocal filetype=typescript.tsx
-" leader
-
-nmap <C-T> :tabnew<CR>
-nmap <leader>w <cmd>tabclose<CR>
-"nmap <C-l> :tabnext<CR>
-"nmap <C-h> :tabprevious<CR>

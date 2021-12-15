@@ -1,6 +1,6 @@
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0
-let g:netrw_browse_split = 4
+let g:netrw_browse_split = 0
 let g:netrw_winsize = 20
 let g:NetrwIsOpen = 0
 let g:netrw_list_hide = netrw_gitignore#Hide()
@@ -11,7 +11,7 @@ function! OpenToRight()
 	:q!
 	execute 'belowright vnew' g:path
 	:vertical resize 30
-	:normal <C-l>
+	:normal <C-w>l
 endfunction
 
 function! ToggleNetrw()
@@ -31,7 +31,7 @@ function! ToggleNetrw()
 endfunction
 
 
-noremap <silent> <C-b> :call ToggleNetrw()<CR>
+noremap <silent> <C-f> :call ToggleNetrw()<CR>
 
 function! NetrwMappings()
 	noremap <buffer> <C-l> <C-w>l
