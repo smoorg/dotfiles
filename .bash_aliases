@@ -2,6 +2,7 @@
 
 # git
 alias ga='git commit --amend --no-edit'
+alias gap='git add . --patch'
 alias gp='git push -u origin "$(git branch --show-current)"'
 alias gpf='git push -u origin "$(git branch --show-current)" -f'
 alias gbl='git branch -l'

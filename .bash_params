@@ -1,10 +1,12 @@
 #!/bin/sh
 
 # configurations
-export PATH=$PATH:/usr/local/games:/usr/local/bin:$HOME/.local/share/applications:$HOME/.dotnet/tools:$(find $HOME/scripts -type d -printf %p:)
+export PATH=$PATH:/usr/local/games:/usr/local/bin:$HOME/.local/share/applications:$HOME/.dotnet/tools:$(find $HOME/scripts -type d -printf %p:):$(yarn global bin)
 export TERM='xterm'
-export LANG=pl_PL.UTF-8
-export LC_ALL=pl_PL.UTF-8
+#export LANG=pl_PL.UTF-8
+#export LC_ALL=pl_PL.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 export EDITOR='nvim'
 
 # xdg
@@ -28,3 +30,9 @@ export WALLPAPER_DIR=$HOME/.local/wallpaper.png
 export WALLPAPERS_DIR=$HOME/Pictures/images/wallpapers
 export MEDIA_DIR=$HOME/Music
 export SCREENSHOT_DIR=$HOME/Pictures/screenshots
+
+export VIRTUALENVWRAPPER_PYTHON=`which python`
+
+export DEVKITPRO=/opt/devkitpro
+export DEVKITARM=/opt/devkitpro/devkitARM
+export DEVKITPPC=/opt/devkitpro/devkitPPC
