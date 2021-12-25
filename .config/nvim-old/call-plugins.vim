@@ -33,7 +33,8 @@ call plug#begin('$XDG_CONFIG_HOME/nvim/plugged')
 	Plug 'vimwiki/vimwiki'
 
 " telescope
- 	Plug 'nvim-lua/popup.nvim'
+" 	Plug 'nvim-lua/popup.nvim'
+ 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 	Plug 'nvim-lua/plenary.nvim'
 	Plug 'nvim-telescope/telescope.nvim'
 call plug#end()
