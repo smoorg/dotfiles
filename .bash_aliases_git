@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# git
+alias gap='git add . --patch'
+alias gp='git push -u origin "$(git branch --show-current)"'
+alias gpf='git push -u origin "$(git branch --show-current)" -f'
+alias gbl='git branch -l'
+alias gbd='git branch -D'
+alias gb='git branch'
+alias gc='git checkout'
+alias gcb='git checkout -b'
+alias gs='git status'
+alias gcm='git commit'
+alias gcma='git commit --amend'
+alias gcmane='git commit --amend --no-edit'
+alias gl="git log --color --date=iso --pretty=format:'%ad%x08%at%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08%aN %s'"
+
+alias gal='cat $HOME/.bash_aliases_git | grep "alias g"'
