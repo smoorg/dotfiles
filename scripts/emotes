@@ -1,0 +1,6 @@
+#!/bin/sh
+echo -e "✓ checkbox tick
+test
+" | dmenu -l 20 | cut -d ' ' -f1 | tr -d '\n' | xclip -i -sel clip
+
+notify-send "Unicode copied: '$(xclip -sel clipboard -o)'"
