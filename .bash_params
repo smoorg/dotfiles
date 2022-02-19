@@ -25,7 +25,7 @@ export CHROME_BIN=/usr/bin/chromium
 # directories
 export SCRIPTS_DIR=$HOME/scripts
 export WALLPAPER_DIR=$HOME/.local/wallpaper.png
-export WALLPAPERS_DIR=$HOME/Pictures/images/wallpapers
+export WALLPAPERS_DIR=$HOME/Pictures/wallpapers
 export MEDIA_DIR=$HOME/Music
 export SCREENSHOT_DIR=$HOME/Pictures/screenshots
 

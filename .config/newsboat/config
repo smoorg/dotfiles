@@ -47,7 +47,7 @@ highlight article ":.*\\(image\\)$" blue default
 highlight article ":.*\\(embedded flash\\)$" magenta default
 
 #podboat
-player "mpv"
+player "mpc add"
 
 ignore-mode "display"
 ignore-article "http://rss.forsal.pl/Forsal" "content =~ \"Kaczyński| pis | PiS | PO |pandemi|szczepionk|covid|koronawirus\""

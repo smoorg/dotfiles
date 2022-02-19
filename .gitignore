@@ -23,6 +23,7 @@ yarn.lock
 .yarn/
 .vscode/
 .vscode-oss/
+go/
 
 # gaming
 .steam/
@@ -88,10 +89,9 @@ freetube-bin/
 
 # private config
 .config/*
-!.config/nvim/
-.config/nvim/plugged
-!.config/nvim/*.vim
 !.config/tmux/
+!.config/alacritty/
+!.config/ranger/rifle.conf
 !.config/mimeapps.list
 scripts/local/
 .gnupg
@@ -123,6 +123,15 @@ OneDrive/
 Videos/
 DAW/
 .local/
+tmp/
+
+# sound/video
+*.avi
+*.mp4
+*.mkv
+*.mp3
+*.flac
+*.webm
 
 # ignore secret files ALWAYS
 .ssh/
@@ -143,4 +152,3 @@ DAW/
 .vim/
 .viminfo
 .NERDTree*
-
