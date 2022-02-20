@@ -29,14 +29,14 @@ remote_file=$(rclone lsl "onedrive:" --include "*.kdbx" --max-depth 2 | awk '{pr
 	fzf --header='Provide remote file to merge with local keepass db')
 
 # list local kdbx files and pick one
-local_file=$(locate "*.kdbx" |\
+local_file=$(find $find_main_folder -iname "*.kdbx" |\
 	fzf --header="Pick which local db to merge with $remote:$remote_file")
 
 echo "download"
 # downloads the file to tmp dir
 rclone copy -v "$remote:$remote_file" "$tmp_copy_dir"
 
-echo "download finished"
+echo"download finished"
 
 read -n 1 -p 'Do you want to backup current db? y/n (default: n)' yn
 echo
@@ -57,7 +57,7 @@ echo
 echo "Merging..."
 
 [ "$has_key" = y ] &&\
-	key=$(locate $find_main_folder | fzf --header="Provide a key file") &&\
+	key=$(find $find_main_folder | fzf --header="Provide a key file") &&\
 	keepassxc-cli merge $local_file "$tmp_copy_dir/$remote_file" --same-credentials -k $key ||\
 	keepassxc-cli merge $local_file "$tmp_copy_dir/$remote_file" --same-credentials
 
