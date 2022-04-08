@@ -6,6 +6,7 @@ export TERM='xterm'
 export LANG=pl_PL.UTF-8
 export LC_ALL=pl_PL.UTF-8
 export EDITOR='nvim'
+export DEFAULT_OUTPUT="DP-4"
 
 # xdg
 export XDG_CONFIG_HOME=$HOME/.config
@@ -15,7 +16,8 @@ export TMUX_CONFIG=$XDG_CONFIG_HOME/tmux
 
 # ssh
 export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
-export SUDO_ASKPASS=/usr/lib/ssh/x11-ssh-askpass
+export SSH_ASKPASS=/usr/lib/ssh/x11-ssh-askpass
+export PINENTRY=/usr/lib/ssh/x11-ssh-askpass
 
 # app specific
 export LYNX_CFG=$HOME/.config/lynx/lynx.cfg
