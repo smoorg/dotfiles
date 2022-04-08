@@ -5,6 +5,9 @@ application/json=nvim.desktop;
 application/rss+xml=firefox.desktop;
 application/octet-stream=firefox.desktop;
 text/markdown=ghostwriter.desktop;sxiv.desktop;
+application/msword=docx2text;
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=docx2text;
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=docx2text;
 
 [Default Applications]
 x-scheme-handler/postman=Postman.desktop
