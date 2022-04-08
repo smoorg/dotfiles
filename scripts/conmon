@@ -1,6 +1,6 @@
 #!/bin/sh
-
 defaultOutput="eDP1"
+[ ! -z $DEFAULT_OUTPUT ] && defaultOutput=$DEFAULT_OUTPUT 
 
 outputs=$(xrandr | grep -v $defaultOutput | grep -e [^s]connected | awk '{print $1}')
 
