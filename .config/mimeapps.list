@@ -8,6 +8,7 @@ text/markdown=ghostwriter.desktop;sxiv.desktop;
 application/msword=docx2text;
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=docx2text;
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=docx2text;
+image/png=sxiv.desktop;
 
 [Default Applications]
 x-scheme-handler/postman=Postman.desktop
