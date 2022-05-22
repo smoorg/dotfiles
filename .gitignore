@@ -98,6 +98,8 @@ scripts/local/
 .mozilla/
 .password-store/
 .purple/
+.task/
+.taskrc
 
 # remmina
 remmina_log
@@ -112,15 +114,22 @@ sent/
 # private files
 Desktop/
 Documents/
+Dokumenty/
 Downloads/
 KeePass/
+Music
 Music/
+Pictures
 Pictures/
 programs/
+Programs/
 repos/
 images/
 OneDrive/
+Videos
 Videos/
+Monero/
+.bitmonero/
 DAW/
 .local/
 tmp/

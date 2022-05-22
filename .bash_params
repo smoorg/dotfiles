@@ -1,7 +1,13 @@
 #!/bin/sh
 
+# devkit
+
+export DEVKITPRO=/opt/devkitpro
+export DEVKITARM=/opt/devkitpro/devkitARM
+export DEVKITPPC=/opt/devkitpro/devkitPPC
+
 # configurations
-export PATH=$PATH:/usr/local/games:/usr/local/bin:$HOME/.local/share/applications:$HOME/.dotnet/tools:$(find $HOME/scripts -type d -printf %p:):$(yarn global bin)
+export PATH=$PATH:/usr/local/games:/usr/local/bin:$HOME/.local/share/applications:$HOME/.dotnet/tools:$(find $HOME/scripts -type d -printf %p:):$(yarn global bin):$DEVKITPRO
 export TERM='xterm'
 export LANG=pl_PL.UTF-8
 export LC_ALL=pl_PL.UTF-8
@@ -33,6 +39,3 @@ export SCREENSHOT_DIR=$HOME/Pictures/screenshots
 
 export VIRTUALENVWRAPPER_PYTHON=`which python`
 
-export DEVKITPRO=/opt/devkitpro
-export DEVKITARM=/opt/devkitpro/devkitARM
-export DEVKITPPC=/opt/devkitpro/devkitPPC
