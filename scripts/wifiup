@@ -1,7 +1,0 @@
-#!/bin/sh
-
-i=''
-# tells if wlp58s0 interface works
-[[ "$(cat /sys/class/net/wlp58s0/operstate)" == "up" ]] && i='直' || i='睊'
-
-echo $i;

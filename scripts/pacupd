@@ -1,4 +1,0 @@
-#!/bin/sh
-
-pacman -Syy archlinux-keyring
-pacman -Syu

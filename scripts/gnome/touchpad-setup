@@ -1,7 +1,0 @@
-deviceid=$1
-# get devices by `xinput list-devices` to find yours
-# get tap action command by `xinput list-props' and your device name/id
-xinput set-prop $deviceid "Synaptics Tap Action" {1,1,1,1,1,1}
-
-# natural scrolling
-xinput set-button-map 29 1 2 3 5 4 6 7 8 9 10 11 12

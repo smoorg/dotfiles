@@ -1,3 +1,0 @@
-#!/bin/sh
-
-sh -c ~/programs/JetBrains/WebStorm-2020.01/bin/webstorm.sh

@@ -1,5 +1,0 @@
-#!/bin/sh
-
-# ip addr list wlp58s0 | grep "inet " | cut -d' ' -f6| cut -d/ -f1
-
-ip addr list | grep "wlp58s0\|wwp0s20f0u5c3" | grep "inet " | cut -d' ' -f6 | cut -d/ -f1

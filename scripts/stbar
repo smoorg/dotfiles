@@ -1,8 +1,0 @@
-#!/bin/sh
-ip=$($SCRIPTS_DIR/ipaddr)
-memory=$(free --si -h | grep Pam | awk '{print "RAM "$3"/"$2}') #awk '{print " "$3"/"$2}')
-cpu=$(top -bn1 | grep "%CPU:" | sed "s/.*, *\([0-9.]*\)%* id.*/\1/" | awk '{print "CPU "$2"%"}') #awk '{print " "$2"%"}')
-volume="奔 $($SCRIPTS_DIR/volume)";
-
-echo "$volume | $cpu | $memory | " $(date +"%H:%M %d/%m/%Y")
-

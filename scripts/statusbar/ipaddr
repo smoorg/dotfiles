@@ -1,1 +1,0 @@
-ip addr list wlp58s0 | grep "inet " | cut -d' ' -f6| cut -d/ -f1

@@ -1,3 +1,0 @@
-#!/bin/sh
-
-[[ "$(xinput list-props 14 | grep Enabled | awk '{print $4}')" -eq 1 ]] && echo "" || echo ""
