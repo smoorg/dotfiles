@@ -17,3 +17,23 @@ alias xlog1='less $HOME/.local/share/xorg/Xorg.1.log'
 
 source $HOME/.bash_aliases_git
 source $HOME/.bash_aliases_priv
+#!/bin/sh
+
+# git
+alias gap='git add . --patch'
+alias gf='git fetch'
+alias gfa='git fetch --all'
+alias gp='git push -u origin "$(git branch --show-current)"'
+alias gpf='git push -u origin "$(git branch --show-current)" -f'
+alias gbl='git branch -l'
+alias gbd='git branch -D'
+alias gb='git branch'
+alias gc='git checkout'
+alias gcb='git checkout -b'
+alias gs='git status'
+alias gcm='git commit'
+alias gcma='git commit --amend'
+alias gcmane='git commit --amend --no-edit'
+alias gl="git log --color --date=iso --pretty=format:'%ad%x08%at%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08%aN %s'"
+
+alias gal='cat $HOME/.bash_aliases | grep "alias g"'
