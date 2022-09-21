@@ -8,7 +8,6 @@ userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
 sysresources=/etc/X11/xinit/.Xresources
 sysmodmap=/etc/X11/xinit/.Xmodmap
-xbindkeys=$XDG_CONFIG_HOME/xbindkeys/config
 
 [ -f $sysresources ] 	&& xrdb -merge $sysresources
 [ -f $sysmodmap ] 	&& xmodmap $sysmodmap
@@ -23,15 +22,13 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-# source scripts
-#[ -d "$SCRIPTS_DIR" ] && source $SCRIPTS_DIR/**/*
-
 # external monitor
-[ -x $SCRIPTS_DIR/conmon ] && $SCRIPTS_DIR/conmon
+[ -x $SCRIPTS_DIR/screen/conmon ] && $SCRIPTS_DIR/screen/conmon
 
-[ -x $SCRIPTS_DIR/statusbar/dwmbar ] && $SCRIPTS_DIR/statusbar/dwmbar &
 # background
-[ -f $WALLPAPER_DIR ] && [ -x $SCRIPTS_DIR/setwall ] && $SCRIPTS_DIR/setwall &
+[ -f $WALLPAPER_DIR ] && [ -x $SCRIPTS_DIR/screen/setwall ] && $SCRIPTS_DIR/screen/setwall
+
+#[ -x dwmbar ] && dwmbar &
 
 # notifications process
 dunst > /dev/null 2>&1 &
