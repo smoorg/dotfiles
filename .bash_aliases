@@ -15,9 +15,7 @@ alias news='newsboat ; pkill -RTMIN+10 dwmblocks'
 alias xlog='less $HOME/.local/share/xorg/Xorg.0.log'
 alias xlog1='less $HOME/.local/share/xorg/Xorg.1.log'
 
-source $HOME/.bash_aliases_git
 source $HOME/.bash_aliases_priv
-#!/bin/sh
 
 # git
 alias gap='git add . --patch'
