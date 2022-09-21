@@ -6,8 +6,11 @@ export DEVKITPRO=/opt/devkitpro
 export DEVKITARM=/opt/devkitpro/devkitARM
 export DEVKITPPC=/opt/devkitpro/devkitPPC
 
+export GOBIN=$HOME/.local/share/go/bin
+
 # configurations
-export PATH=$PATH:/usr/local/games:/usr/local/bin:$HOME/.local/share/applications:$HOME/.dotnet/tools:$(find $HOME/scripts -type d -printf %p:):$(yarn global bin):$DEVKITPRO
+scripts_dirs=$(find $HOME/scripts -type d ! -iwholename "*git*" -printf %p:)
+export PATH=$PATH:/usr/local/games:/usr/local/bin:$HOME/.local/bin:$HOME/.local/share/applications:$HOME/.dotnet/tools:$(yarn global bin):$DEVKITPRO:$scripts_dirs
 export TERM='xterm'
 export LANG=pl_PL.UTF-8
 export LC_ALL=pl_PL.UTF-8
