@@ -89,6 +89,7 @@ freetube-bin/
 
 # private config
 .config/*
+!.config/lynx/lynx.cfg
 !.config/tmux/
 !.config/alacritty/
 !.config/ranger/rifle.conf
