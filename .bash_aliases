@@ -6,6 +6,10 @@ alias dotnet-ef=$HOME/.dotnet/tools/dotnet-ef
 #tmux - force 256 colors mode
 alias tmux='tmux -2'
 
+#scripts
+
+alias cdrepo='cd $(repocd)'
+
 # programs
 alias vnc='remmina'
 
