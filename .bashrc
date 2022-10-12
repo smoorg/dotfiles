@@ -3,6 +3,7 @@ source $HOME/.bash_params
 source $HOME/.bash_aliases
 
 source /usr/share/git/completion/git-completion.bash
+source /usr/share/bash-completion/bash_completion
 
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
     ssh-agent > "$XDG_RUNTIME_DIR/ssh-agent.env"
