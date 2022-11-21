@@ -21,6 +21,8 @@ alias xlog1='less $HOME/.local/share/xorg/Xorg.1.log'
 
 source $HOME/.bash_aliases_priv
 
+alias ll="ls -l --color"
+
 # git
 alias gap='git add . --patch'
 alias gf='git fetch'
@@ -36,6 +38,10 @@ alias gs='git status'
 alias gcm='git commit'
 alias gcma='git commit --amend'
 alias gcmane='git commit --amend --no-edit'
-alias gl="git log --color --date=iso --pretty=format:'%ad%x08%at%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08%aN %s'"
+alias gr='git rebase --commiter-date-is-author-date'
+alias grc='git rebase --continue'
+alias gra='git rebase --abort'
+alias grl='git reflog'
+alias gl="git log --color --date=iso --format=fuller"
 
 alias gal='cat $HOME/.bash_aliases | grep "alias g"'
