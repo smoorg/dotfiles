@@ -1,7 +1,6 @@
 #!/bin/sh
 
 # devkit
-
 export DEVKITPRO=/opt/devkitpro
 export DEVKITARM=/opt/devkitpro/devkitARM
 export DEVKITPPC=/opt/devkitpro/devkitPPC
@@ -42,3 +41,4 @@ export SCREENSHOT_DIR=$HOME/Pictures/screenshots
 
 export VIRTUALENVWRAPPER_PYTHON=`which python`
 
+export SUDO_ASKPASS="$SCRIPTS_DIR/askpass"
