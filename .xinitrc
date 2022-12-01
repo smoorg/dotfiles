@@ -28,8 +28,6 @@ fi
 # background
 [ -f $WALLPAPER_DIR ] && [ -x $SCRIPTS_DIR/screen/setwall ] && $SCRIPTS_DIR/screen/setwall
 
-#[ -x dwmbar ] && dwmbar &
-
 # notifications process
 dunst > /dev/null 2>&1 &
 
@@ -39,9 +37,14 @@ bluetoothctl power on &
 # transparency
 xcompmgr &
 
-dwmblocks &
+# menu &
+while true; do 
+    xsetroot -name "$($SCRIPTS_DIR/statusbar/statusbar)";
+    sleep 1;
+done  &
 
 # window manager
 #java param to work with webstorm 
 export _JAVA_AWT_WM_NONREPARENTING=1
-exec ssh-agent /usr/local/bin/dwm
+
+[ -x $SCRIPTS_DIR/startdwm ] && $SCRIPTS_DIR/startdwm || /usr/local/bin/dwm

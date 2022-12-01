@@ -42,3 +42,5 @@ export SCREENSHOT_DIR=$HOME/Pictures/screenshots
 export VIRTUALENVWRAPPER_PYTHON=`which python`
 
 export SUDO_ASKPASS="$SCRIPTS_DIR/askpass"
+
+[ -f "$HOME/.bash_params_priv" ] && source $HOME/.bash_params_priv
