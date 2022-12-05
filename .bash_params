@@ -5,16 +5,12 @@ export DEVKITPRO=/opt/devkitpro
 export DEVKITARM=/opt/devkitpro/devkitARM
 export DEVKITPPC=/opt/devkitpro/devkitPPC
 
-export GOBIN=$HOME/.local/share/go/bin
-
-# configurations
-scripts_dirs=$(find $HOME/scripts -type d ! -iwholename "*git*" -printf %p:)
-export PATH=$PATH:/usr/local/games:/usr/local/bin:$HOME/.local/bin:$HOME/.local/share/applications:$HOME/.dotnet/tools:$(yarn global bin):$DEVKITPRO:$scripts_dirs
-export TERM='xterm'
-export LANG=pl_PL.UTF-8
-export LC_ALL=pl_PL.UTF-8
-export EDITOR='nvim'
-export DEFAULT_OUTPUT="DP-4"
+# directories
+export SCRIPTS_DIR=$HOME/scripts
+export WALLPAPER_DIR=$HOME/.local/wallpaper.png
+export WALLPAPERS_DIR=$HOME/Pictures/wallpapers
+export MEDIA_DIR=$HOME/Music
+export SCREENSHOT_DIR=$HOME/Pictures/screenshots
 
 # xdg
 export XDG_CONFIG_HOME=$HOME/.config
@@ -31,16 +27,19 @@ export PINENTRY=/usr/lib/ssh/x11-ssh-askpass
 export LYNX_CFG=$HOME/.config/lynx/lynx.cfg
 export MPD_HOST=$HOME/.local/share/mpd/socket
 export CHROME_BIN=/usr/bin/chromium
+export GOBIN=$HOME/.local/share/go/bin
 
-# directories
-export SCRIPTS_DIR=$HOME/scripts
-export WALLPAPER_DIR=$HOME/.local/wallpaper.png
-export WALLPAPERS_DIR=$HOME/Pictures/wallpapers
-export MEDIA_DIR=$HOME/Music
-export SCREENSHOT_DIR=$HOME/Pictures/screenshots
 
+# configurations
+export TERM='xterm'
+export LANG=pl_PL.UTF-8
+export LC_ALL=pl_PL.UTF-8
+export EDITOR='nvim'
+export DEFAULT_OUTPUT="DP-4"
 export VIRTUALENVWRAPPER_PYTHON=`which python`
-
 export SUDO_ASKPASS="$SCRIPTS_DIR/askpass"
 
 [ -f "$HOME/.bash_params_priv" ] && source $HOME/.bash_params_priv
+
+scripts_dirs=$(find $SCRIPTS_DIR -type d ! -iwholename "*git*" -printf %p:)
+export PATH=$PATH:/usr/local/games:/usr/local/bin:$HOME/.local/bin:$HOME/.local/share/applications:$HOME/.dotnet/tools:$(yarn global bin):$DEVKITPRO:$scripts_dirs
