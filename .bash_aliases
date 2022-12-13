@@ -45,3 +45,4 @@ alias grl='git reflog'
 alias gl="git log --color --date=iso --format=fuller"
 
 alias gal='cat $HOME/.bash_aliases | grep "alias g"'
+alias dot='git -C .dotfiles/ --work-tree=$HOME'

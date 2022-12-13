@@ -2,8 +2,6 @@
 setxkbmap pl
 # dirs
 
-#source $HOME/.bashrc
-
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
 sysresources=/etc/X11/xinit/.Xresources
@@ -38,9 +36,9 @@ bluetoothctl power on &
 xcompmgr &
 
 # menu &
-while true; do 
+while true; do
     xsetroot -name "$($SCRIPTS_DIR/statusbar/statusbar)";
-    sleep 1;
+    sleep 5;
 done  &
 
 # window manager
