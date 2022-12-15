@@ -86,6 +86,7 @@ freetube-bin/
 .bash_history
 .bash_logout
 .bash_aliases_priv
+.bash_params_priv
 
 # private config
 .config/*
@@ -134,6 +135,7 @@ Monero/
 DAW/
 .local/
 tmp/
+.gitconfig
 
 # sound/video
 *.avi
