@@ -45,4 +45,4 @@ done  &
 #java param to work with webstorm 
 export _JAVA_AWT_WM_NONREPARENTING=1
 
-[ -x $SCRIPTS_DIR/startdwm ] && $SCRIPTS_DIR/startdwm || /usr/local/bin/dwm
+[ -x "$SCRIPTS_DIR/startdwm" ] && startdwm || /usr/local/bin/dwm

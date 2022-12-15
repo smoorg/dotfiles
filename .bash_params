@@ -11,6 +11,7 @@ export WALLPAPER_DIR=$HOME/.local/wallpaper.png
 export WALLPAPERS_DIR=$HOME/Pictures/wallpapers
 export MEDIA_DIR=$HOME/Music
 export SCREENSHOT_DIR=$HOME/Pictures/screenshots
+export REPOS=$HOME/repos
 
 # xdg
 export XDG_CONFIG_HOME=$HOME/.config
