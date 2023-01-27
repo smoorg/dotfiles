@@ -12,6 +12,7 @@ alias cdrepo='cd $(repocd)'
 
 # programs
 alias vnc='remmina'
+alias datagrip='setsid -f /home/matr/Programs/DataGrip-2022.3.2/bin/datagrip.sh &'
 
 alias castget='castget -C ~/.config/castget/castget.conf'
 alias news='newsboat ; pkill -RTMIN+10 dwmblocks'
