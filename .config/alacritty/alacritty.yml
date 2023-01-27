@@ -800,9 +800,9 @@ key_bindings:
   #- { key: Insert,         mods: Shift,                           action: PasteSelection   }
   #- { key: Key0,           mods: Control,                         action: ResetFontSize    }
   #- { key: Equals,         mods: Control,                         action: IncreaseFontSize }
-  - { key: K,              mods: Control,                         action: IncreaseFontSize }
+  - { key: K,              mods: Control|Shift,                         action: IncreaseFontSize }
   - { key: NumpadAdd,      mods: Control,                         action: IncreaseFontSize }
-  - { key: J,          mods: Control,                         action: DecreaseFontSize }
+  - { key: J,          mods: Control|Shift,                         action: DecreaseFontSize }
   #- { key: NumpadSubtract, mods: Control,                         action: DecreaseFontSize }
 
   # (Windows only)
@@ -868,5 +868,5 @@ font:
 colors:
   primary:
     background: '#000000'
-window:
-  opacity: 0.92
+# window:
+#   opacity: 0.92
