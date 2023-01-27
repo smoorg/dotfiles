@@ -28,7 +28,7 @@ color article            default default
 
 browser linkhandler
 macro , open-in-browser
-macro v set browser "setsid -f mpv" ; open-in-browser ; set browser linkhandler
+macro v set browser "mpv" ; open-in-browser ; set browser linkhandler
 macro f set browser "firefox" ; open-in-browser ; set browser linkhandler
 macro w set browser "lynx" ; open-in-browser ; set browser linkhandler
 macro a set browser "yt-dlp --add-metadata -xic -f bestaudio/best -o \"~/Music/podcasts/youtube/%(title)s.%(ext)s\"" ; open-in-browser ; set browser linkhandler
