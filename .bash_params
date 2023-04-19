@@ -10,8 +10,8 @@ export SCREENSHOT_DIR=$HOME/Pictures/screenshots
 
 # configurations
 export TERM='xterm'
-export LANG=pl_PL.UTF-8
-export LC_ALL=pl_PL.UTF-8
+#export LANG=pl_PL.UTF-8
+#export LC_ALL=pl_PL.UTF-8
 export EDITOR='nvim'
 export DEFAULT_OUTPUT="DP-4"
 
@@ -32,12 +32,6 @@ export MPD_HOST=$HOME/.local/share/mpd/socket
 export CHROME_BIN=/usr/bin/chromium
 export GOBIN=$HOME/.local/share/go/bin
 
-# configurations
-export TERM='xterm'
-export LANG=pl_PL.UTF-8
-export LC_ALL=pl_PL.UTF-8
-export EDITOR='nvim'
-export DEFAULT_OUTPUT="DP-4"
 export VIRTUALENVWRAPPER_PYTHON=`which python`
 export SUDO_ASKPASS="$SCRIPTS_DIR/askpass"
 
