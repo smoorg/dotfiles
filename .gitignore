@@ -149,7 +149,7 @@ tmp/
 .ssh/
 *.gpg
 *.rsa
-*_rsa
+*_rsa.pub
 *.kdbx
 *.key
 
@@ -163,4 +163,5 @@ tmp/
 # nvim/vim cache
 .vim/
 .viminfo
+.local/nvim
 .NERDTree*
