@@ -865,8 +865,9 @@ font:
     family: 'Jetbrains Mono'
   italic:
     family: 'Jetbrains Mono'
+  size: 12
 colors:
   primary:
     background: '#000000'
-# window:
-#   opacity: 0.92
+window:
+  background_opacity: 0.92
