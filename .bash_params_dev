@@ -1,0 +1,26 @@
+#!/bin/sh
+
+# ruby
+export GEM_HOME=$HOME/.cache/gem
+# Load Ruby Version Manager (RVM) into a shell session *as a function*
+if [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
+    source "$HOME/.rvm/scripts/rvm" 
+    export PATH="$PATH:$HOME/.rvm/bin"
+fi
+
+# golang
+export GOBIN=$HOME/.local/share/go/bin
+
+
+# 3ds devkit
+export DEVKITPRO=/opt/devkitpro
+export DEVKITARM=/opt/devkitpro/devkitARM
+export DEVKITPPC=/opt/devkitpro/devkitPPC
+
+# dotnet
+DOTNET_TOOLS=$HOME/.dotnet/tools
+
+# javascript
+YARN_GLOBAL=$(yarn global bin)
+
+export PATH=$PATH:$DOTNET_TOOLS:$YARN_GLOBAL:$DEVKITPRO

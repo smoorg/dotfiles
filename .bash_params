@@ -1,12 +1,5 @@
 #!/bin/sh
 
-# devkit
-export DEVKITPRO=/opt/devkitpro
-export DEVKITARM=/opt/devkitpro/devkitARM
-export DEVKITPPC=/opt/devkitpro/devkitPPC
-
-export GOBIN=$HOME/.local/share/go/bin
-
 # directories
 export REPOS=$HOME/repos
 export SCRIPTS_DIR=$HOME/repos/scripts
@@ -39,7 +32,6 @@ export MPD_HOST=$HOME/.local/share/mpd/socket
 export CHROME_BIN=/usr/bin/chromium
 export GOBIN=$HOME/.local/share/go/bin
 
-
 # configurations
 export TERM='xterm'
 export LANG=pl_PL.UTF-8
@@ -51,5 +43,7 @@ export SUDO_ASKPASS="$SCRIPTS_DIR/askpass"
 
 [ -f "$HOME/.bash_params_priv" ] && source $HOME/.bash_params_priv
 
+# get all scripts dir subfolders (except .git)
 scripts_dirs=$(find $SCRIPTS_DIR -type d ! -iwholename "*git*" -printf %p:)
-export PATH=$PATH:/usr/local/games:/usr/local/bin:$HOME/.local/bin:$HOME/.local/share/applications:$HOME/.dotnet/tools:$(yarn global bin):$DEVKITPRO:$scripts_dirs
+
+export PATH=$PATH:/usr/local/games:/usr/local/bin:$HOME/.local/bin:$HOME/.local/share/applications:$scripts_dirs
