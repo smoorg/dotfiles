@@ -9,7 +9,7 @@ application/msword=docx2text;
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=docx2text;
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=docx2text;
 image/png=sxiv.desktop;
-x-scheme-handler/tg=userapp-Telegram Desktop-MT5KW1.desktop;
+x-scheme-handler/tg=userapp-Telegram Desktop-MT5KW1.desktop;org.telegram.desktop.desktop;
 
 [Default Applications]
 x-scheme-handler/postman=Postman.desktop
@@ -26,4 +26,4 @@ x-scheme-handler/http=firefox.desktop
 x-scheme-handler/https=firefox.desktop
 text/html=firefox.desktop
 x-scheme-handler/msteams=teams.desktop
-x-scheme-handler/tg=userapp-Telegram Desktop-MT5KW1.desktop
+x-scheme-handler/tg=org.telegram.desktop.desktop

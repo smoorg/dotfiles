@@ -1,5 +1,10 @@
 #!/bin/sh
 
+# themes
+export GTK_THEME=Adwaita:dark
+export GTK2_RC_FILES=/usr/share/themes/Adwaita-dark/gtk-2.0/gtkrc
+export QT_STYLE_OVERRIDE=adwaita-dark
+
 # directories
 export REPOS=$HOME/repos
 export SCRIPTS_DIR=$HOME/repos/scripts
@@ -9,9 +14,9 @@ export MEDIA_DIR=$HOME/Music
 export SCREENSHOT_DIR=$HOME/Pictures/screenshots
 
 # configurations
-export TERM='xterm'
-#export LANG=pl_PL.UTF-8
-#export LC_ALL=pl_PL.UTF-8
+export TERM='alacritty'
+export LANG=pl_PL.UTF-8
+export LC_ALL=pl_PL.UTF-8
 export EDITOR='nvim'
 export DEFAULT_OUTPUT="DP-4"
 
@@ -38,6 +43,6 @@ export SUDO_ASKPASS="$SCRIPTS_DIR/askpass"
 [ -f "$HOME/.bash_params_priv" ] && source $HOME/.bash_params_priv
 
 # get all scripts dir subfolders (except .git)
-scripts_dirs=$(find $SCRIPTS_DIR -type d ! -iwholename "*git*" -printf %p:)
+scripts_dirs=$(find $SCRIPTS_DIR -type d ! -iwholename "*.git*" -printf %p:)
 
 export PATH=$PATH:/usr/local/games:/usr/local/bin:$HOME/.local/bin:$HOME/.local/share/applications:$scripts_dirs

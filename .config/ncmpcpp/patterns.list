@@ -1,7 +1,7 @@
 %n - %t
+%t
+%n - %a - %t
 %a - %b - 0%n %t
 %a - %b (FULL ALBUM) - 0%n %t
-%t
 %a - %b - %n %t
 %a - %b - %n %c
-%n - %a - %t

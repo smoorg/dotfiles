@@ -853,21 +853,25 @@ key_bindings:
 
 # ------------------------------ CUSTOM CONFIG STARTS --------------------------------------
 font:
-#   normal:
-#     family: 'Iosevka Term'
+  #  normal:
+  #    family: 'Iosevka Term'
 #   bold:
 #     family: 'Iosevka Term'
 #   italic:
 #     family: 'Iosevka Term'
   normal:
-    family: 'Jetbrains Mono'
+    #family: 'Iosevka Term'
+    #family: 'Jetbrains Mono'
+    #family: 'Berkeley Mono Variable'
+    family: 'JetBrainsMono Nerd Font Mono'
   bold:
-    family: 'Jetbrains Mono'
+    family: 'JetBrainsMono Nerd Font Mono'
   italic:
-    family: 'Jetbrains Mono'
+    family: 'JetBrainsMono Nerd Font Mono'
   size: 12
 colors:
   primary:
     background: '#000000'
+    #foreground: '#ffa500'
 window:
   background_opacity: 0.92
