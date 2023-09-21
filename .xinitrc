@@ -26,6 +26,9 @@ fi
 # background
 [ -f $WALLPAPER_DIR ] && [ -x $SCRIPTS_DIR/screen/setwall ] && $SCRIPTS_DIR/screen/setwall
 
+# search for all repositories
+[ -x $SCRIPTS_DIR/git/repocd ] && $SCRIPTS_DIR/git/repocd
+
 # notifications process
 dunst > /dev/null 2>&1 &
 
