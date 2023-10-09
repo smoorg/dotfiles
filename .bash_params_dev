@@ -23,5 +23,7 @@ export GEM_HOME=$HOME/.cache/gem
 #    rvm use 2.7.7
 #fi
 
+export GOPRIVATE=gitlab.com/readly-ab/*
+
 export PATH=$PATH:$DOTNET_TOOLS:$YARN_GLOBAL:$DEVKITPRO
 

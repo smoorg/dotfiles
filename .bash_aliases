@@ -45,6 +45,7 @@ alias ll="ls -l --color"
 	# checkout
 	alias gc='git checkout'
 	alias gcb='git checkout -b'
+        alias gcp='git checkout -p'
 	
 	# status
 	alias gs='git status'
@@ -58,6 +59,9 @@ alias ll="ls -l --color"
 	alias gr='git rebase --commiter-date-is-author-date'
 	alias grc='git rebase --continue'
 	alias gra='git rebase --abort'
+
+        # reset
+        alias grp='git reset -p'
 	
 	# log
 	alias grl='git reflog'
