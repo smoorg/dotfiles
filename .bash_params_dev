@@ -13,17 +13,19 @@ DOTNET_TOOLS=$HOME/.dotnet/tools
 
 # javascript
 YARN_GLOBAL=$(yarn global bin)
+source /usr/share/nvm/init-nvm.sh
 
 # ruby
 export GEM_HOME=$HOME/.cache/gem
-# Load Ruby Version Manager (RVM) into a shell session *as a function*
-#if [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
-#    export PATH="$PATH:$HOME/.rvm/bin"
-#    source "$HOME/.rvm/scripts/rvm" 
-#    rvm use 2.7.7
-#fi
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+RVM="$PATH:$HOME/.rvm/bin"
 
 export GOPRIVATE=gitlab.com/readly-ab/*
 
-export PATH=$PATH:$DOTNET_TOOLS:$YARN_GLOBAL:$DEVKITPRO
 
+# Added by Toolbox App
+TOOLBOX=$HOME/.local/share/JetBrains/Toolbox/scripts
+
+export PATH=$PATH:$DOTNET_TOOLS:$YARN_GLOBAL:$DEVKITPRO:$RVM:$TOOLBOX
