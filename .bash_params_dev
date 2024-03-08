@@ -27,7 +27,12 @@ if [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
     RVM="$PATH:$HOME/.rvm/bin"
 fi
 
+# go
+export GOPRIVATE=gitlab.com/readly-ab/*
+# direnv (recognizes .envrc files)
+eval "$(direnv hook bash)"
+
 # Added by Toolbox App
 TOOLBOX=$HOME/.local/share/JetBrains/Toolbox/scripts
 
-export PATH=$PATH:$DOTNET_TOOLS:$YARN_GLOBAL:$DEVKITPRO:$RVM:$TOOLBOX
+export PATH=$PATH:$DOTNET_TOOLS:$YARN_GLOBAL:$DEVKITPRO:$RVM:$TOOLBOX:$GOBIN
