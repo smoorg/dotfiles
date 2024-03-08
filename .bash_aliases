@@ -30,8 +30,12 @@ alias gf='git fetch'
 alias gfa='git fetch --all'
 
 # push
+alias gpl='git pull'
+alias gplr='git pull --rebase'
+
+# push
 alias gp='git push -u origin "$(git branch --show-current)"'
-alias gpf='git push -u origin "$(git branch --show-current)" -f'
+alias gpf='git push -u origin "$(git branch --show-current)" --force-with-lease'
 
 # branch
 alias gbl='git branch -l'
