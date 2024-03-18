@@ -2,6 +2,7 @@
 
 # golang
 export GOBIN=$HOME/.local/share/go/bin
+export GOPRIVATE=gitlab.com/readly-ab/*
 
 # 3ds devkit
 export DEVKITPRO=/opt/devkitpro
@@ -17,13 +18,14 @@ source /usr/share/nvm/init-nvm.sh
 
 # ruby
 export GEM_HOME=$HOME/.cache/gem
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-RVM="$PATH:$HOME/.rvm/bin"
-
-export GOPRIVATE=gitlab.com/readly-ab/*
-
+# Load Ruby Version Manager (RVM) into a shell session *as a function*
+if [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
+    export PATH="$PATH:$HOME/.rvm/bin"
+    source "$HOME/.rvm/scripts/rvm" 
+    rvm use 2.7.7
+    # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+    RVM="$PATH:$HOME/.rvm/bin"
+fi
 
 # Added by Toolbox App
 TOOLBOX=$HOME/.local/share/JetBrains/Toolbox/scripts
