@@ -1,3 +1,11 @@
+# sys folders
+Pictures
+Videos
+Documents
+Games
+Desktop
+Thrash
+
 # cache
 .cache
 .castget/
@@ -11,10 +19,15 @@
 .surf
 
 # dev environment
-.angular-config.json
+.cargo/
 .cmake/
 .docker/
 .java/
+.mongodb/
+go/
+
+# js
+.angular-config.json
 node_modules/
 .npmrc
 .npm/
@@ -23,19 +36,12 @@ yarn.lock
 .yarn/
 .vscode/
 .vscode-oss/
-go/
 
-# gaming
-.steam/
-.paradoxlauncher/
-.steampath
-.steampid
-.local/share/Steam/
-.local/share/Paradox\ Interactive/
-.local/share/vulkan/
-.wine
-Games/
-My Games/
+# ruby
+.bundle/
+.gem/
+.rvm/
+
 # csharp configs
 .aspnet/
 .dotnet/
@@ -46,6 +52,24 @@ My Games/
 
 # dotnet templates cache
 .templateengine/
+
+# hosting
+.vagrant
+.ngrok2
+
+# gaming
+.dosbox/
+.steam/
+.paradoxlauncher/
+.steampath
+.steampid
+.local/share/Steam/
+.local/share/Paradox\ Interactive/
+.local/share/vulkan/
+.wine
+Games/
+My Games/
+
 
 # audio
 .ncmpcpp/
@@ -80,10 +104,11 @@ freetube-bin/
 .nmcli_history
 .lesshst
 .node_repl_history
+*_history
 
 # bash files
 .Xauthority
-.bash_history
+.bash_history*
 .bash_logout
 .bash_aliases_priv
 .bash_params_priv

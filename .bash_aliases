@@ -5,17 +5,19 @@
 #dotnet
 alias dotnet-ef=$HOME/.dotnet/tools/dotnet-ef
 
-#tmux - force 256 colors mode
 alias tmux='tmux -2'
 alias cdrepo='cd $(repocd)'
+
+# apps
 alias vnc='remmina'
 alias castget='castget -C ~/.config/castget/castget.conf'
-alias news='newsboat ; pkill -RTMIN+10 dwmblocks'
+alias news='newsboat'
+alias burncd='asunder'
 
 alias ll="ls -l --color"
 
 # home git folder
-alias dot='git -C .dotfiles/ --work-tree=$HOME'
+alias dot='git -C ~/.dotfiles/ --work-tree=$HOME'
 
 # docker stop all
 alias dkill='docker stop $(docker ps -q)'

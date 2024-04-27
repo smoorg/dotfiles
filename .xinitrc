@@ -46,6 +46,6 @@ done  &
 
 # window manager
 #java param to work with webstorm 
-export _JAVA_AWT_WM_NONREPARENTING=1
+#export _JAVA_AWT_WM_NONREPARENTING=1
 
 [ -x "$SCRIPTS_DIR/startdwm" ] && startdwm || /usr/local/bin/dwm
