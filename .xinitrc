@@ -38,6 +38,9 @@ bluetoothctl power on &
 # transparency
 xcompmgr &
 
+# gtk theme support
+xsettingsd &
+
 # menu &
 while true; do
     xsetroot -name "$($SCRIPTS_DIR/statusbar/statusbar)";

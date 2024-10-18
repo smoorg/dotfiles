@@ -8,6 +8,9 @@ alias dotnet-ef=$HOME/.dotnet/tools/dotnet-ef
 alias tmux='tmux -2'
 alias cdrepo='cd $(repocd)'
 
+# print
+alias lp2='lp -o sides=two-sided-long-edge'
+
 # apps
 alias vnc='remmina'
 alias castget='castget -C ~/.config/castget/castget.conf'
@@ -61,6 +64,7 @@ alias gcmane='git commit --amend --no-edit'
 alias gr='git rebase --commiter-date-is-author-date'
 alias grc='git rebase --continue'
 alias gra='git rebase --abort'
+alias grm='git fetch && git rebase origin/$(git branch --list | grep -E "main|master" | tr -d " ")'
 
 # reset
 alias grp='git reset -p'

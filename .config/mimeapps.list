@@ -10,6 +10,7 @@ application/vnd.openxmlformats-officedocument.wordprocessingml.document=docx2tex
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=docx2text;
 image/png=sxiv.desktop;
 x-scheme-handler/tg=userapp-Telegram Desktop-MT5KW1.desktop;org.telegram.desktop.desktop;
+x-scheme-handler/tonsite=org.telegram.desktop.desktop;
 
 [Default Applications]
 x-scheme-handler/postman=Postman.desktop
@@ -30,3 +31,4 @@ x-scheme-handler/tg=org.telegram.desktop.desktop;
 x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
 image/gif=sxiv.desktop
 text/x-shellscript=nvim.desktop
+x-scheme-handler/tonsite=org.telegram.desktop.desktop
