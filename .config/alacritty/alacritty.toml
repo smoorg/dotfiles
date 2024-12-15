@@ -5,13 +5,13 @@ background = "#000000"
 size = 13
 
 [font.bold]
-family = "Berkeley Mono Variable"
+family = "JetBrains Mono"
 
 [font.italic]
-family = "Berkeley Mono Variable"
+family = "Jetbrains Mono"
 
 [font.normal]
-family = "Berkeley Mono Variable"
+family = "Jetbrains Mono"
 
 [[keyboard.bindings]]
 action = "IncreaseFontSize"

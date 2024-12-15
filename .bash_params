@@ -7,7 +7,7 @@
 
 # directories
 export REPOS=$HOME/repos
-export SCRIPTS_DIR=$HOME/repos/scripts
+export SCRIPTS_DIR=$REPOS/private/scripts
 export WALLPAPER_DIR=$HOME/.local/wallpaper.png
 export WALLPAPERS_DIR=$HOME/Pictures/wallpapers
 export MEDIA_DIR=$HOME/Music
