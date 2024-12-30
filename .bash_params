@@ -15,6 +15,7 @@ export SCREENSHOT_DIR=$HOME/Pictures/screenshots
 
 # configurations
 export TERM=xterm
+export TERMINAL=alacritty
 export LANG=pl_PL.UTF-8
 export LC_ALL=pl_PL.UTF-8
 export EDITOR='nvim'
@@ -45,4 +46,19 @@ export SUDO_ASKPASS="$SCRIPTS_DIR/askpass"
 # get all scripts dir subfolders (except .git)
 scripts_dirs=$(find $SCRIPTS_DIR -type d ! -iwholename "*.git*" -printf %p:)
 
-export PATH=$PATH:/usr/local/games:/usr/local/bin:$HOME/.local/bin:$HOME/.local/share/applications:$scripts_dirs
+# list all customly added sources
+# I find it easier to insert new ones
+sources=(
+    /usr/local/games
+    /usr/local/bin
+    $HOME/.local/bin
+    $HOME/.local/share/applications
+    $GEM_HOME
+    $scripts_dirs
+)
+
+# flatten the list
+# replace spaces echo generates between elements with colons
+paths=$(echo ${sources[*]} | tr ' ' :)
+
+export PATH=$PATH:$paths

@@ -29,4 +29,4 @@ key = "J"
 mods = "Control|Shift"
 
 [window]
-opacity = 1
+opacity = 0.9
