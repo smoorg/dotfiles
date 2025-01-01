@@ -8,10 +8,13 @@
 # directories
 export REPOS=$HOME/repos
 export SCRIPTS_DIR=$REPOS/private/scripts
-export WALLPAPER_DIR=$HOME/.local/wallpaper.png
-export WALLPAPERS_DIR=$HOME/Pictures/wallpapers
+export PICTURES_DIR=$HOME/Pictures
+export WALLPAPERS_DIR=$PICTURES_DIR/wallpapers
+export SCREENSHOT_DIR=$PICTURES_DIR/screenshots
 export MEDIA_DIR=$HOME/Music
-export SCREENSHOT_DIR=$HOME/Pictures/screenshots
+
+# special files
+export WALLPAPER_FILE=$HOME/.local/wallpaper.png
 
 # configurations
 export TERM=xterm
