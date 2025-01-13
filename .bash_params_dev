@@ -4,10 +4,13 @@
 export GOBIN=$HOME/.local/share/go/bin
 export GOPRIVATE=gitlab.com/readly-ab/*
 
-# 3ds devkit
-export DEVKITPRO=/opt/devkitpro
-export DEVKITARM=/opt/devkitpro/devkitARM
-export DEVKITPPC=/opt/devkitpro/devkitPPC
+# devkitpro
+dkp=/opt/devkitpro
+if [ -d $dkp ]; then
+    export DEVKITPRO=$dkp
+    export DEVKITARM=$dkp/devkitARM
+    export DEVKITPPC=$dkp/devkitPPC
+fi
 
 # dotnet
 DOTNET_TOOLS=$HOME/.dotnet/tools
