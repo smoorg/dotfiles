@@ -20,7 +20,9 @@ export WALLPAPER_FILE=$HOME/.local/wallpaper.png
 export TERM=xterm
 export TERMINAL=alacritty
 export LANG=pl_PL.UTF-8
+export LANGUAGE=pl_PL.UTF-8
 export LC_ALL=pl_PL.UTF-8
+export LC_COLLATE=pl_PL.UTF-8
 export EDITOR='nvim'
 export DEFAULT_OUTPUT="DP-4"
 
@@ -65,3 +67,4 @@ sources=(
 paths=$(echo ${sources[*]} | tr ' ' :)
 
 export PATH=$PATH:$paths
+source /usr/share/git/git-prompt.sh

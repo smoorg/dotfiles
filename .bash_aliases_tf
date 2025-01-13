@@ -1,0 +1,4 @@
+#!/bin/sh
+
+alias tp='terraform init --upgrade && terraform plan -out=../../plan'
+alias ta='terraform apply "../../plan"'
