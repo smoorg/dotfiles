@@ -1,6 +1,5 @@
 #!/bin/sh
 
-
 # devkitpro
 dkp=/opt/devkitpro
 if [ -d $dkp ]; then
@@ -10,7 +9,7 @@ if [ -d $dkp ]; then
 fi
 
 # dotnet
-DOTNET_TOOLS=$HOME/.dotnet/tools
+export DOTNET_TOOLS=$HOME/.dotnet/tools
 
 # javascript
 if [ -x yarn ]; then
@@ -40,4 +39,4 @@ eval "$(direnv hook bash)"
 # Added by Toolbox App
 TOOLBOX=$HOME/.local/share/JetBrains/Toolbox/scripts
 
-export PATH=$PATH:$DOTNET_TOOLS:$YARN_GLOBAL:$DEVKITPRO:$RVM:$TOOLBOX:$GOBIN
+export PATH=$PATH:$DOTNET_TOOLS:$YARN_GLOBAL:$DEVKITPRO:$RVM:$GEM_HOME:$TOOLBOX:$GOBIN
