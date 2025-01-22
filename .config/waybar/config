@@ -1,0 +1,451 @@
+[{
+    "layer": "bottom",
+    "output": "eDP-1",
+    "position": "top",
+    "mod": "dock",
+    "exclusive": true,
+    "gtk-layer-shell": true,
+    "margin-bottom": 0,
+    "passthrough": false,
+    "height": 23,
+    "modules-left": [
+        "custom/os_button",
+        "wlr/taskbar",
+        "custom/dwl_tag#0",
+        "custom/dwl_tag#1",
+        "custom/dwl_tag#2",
+        "custom/dwl_tag#3",
+        "custom/dwl_tag#4",
+        "custom/dwl_tag#5",
+        "custom/dwl_tag#6",
+        "custom/dwl_tag#7",
+        "custom/dwl_tag#8",
+        "custom/dwl_tag#9",
+        "custom/dwl_layout",
+    ],
+    "modules-center": [
+        "custom/dwl_title"
+    ],
+    "modules-right": [
+        "cpu",
+        "temperature",
+        "memory",
+        "disk",
+        "tray",
+        "pulseaudio",
+        "network",
+        "battery",
+        "clock"
+    ],
+    "custom/os_button": {
+        "format": "",
+        "on-click": "wmenu-run -l 10",
+        "tooltip": false
+    },
+    "cpu": {
+        "interval": 5,
+        "format": "  {usage}%",
+        "max-length": 10
+    },
+    "temperature": {
+        "hwmon-path-abs": "/sys/devices/platform/coretemp.0/hwmon",
+        "input-filename": "temp2_input",
+        "critical-threshold": 75,
+        "tooltip": false,
+        "format-critical": "({temperatureC}°C)",
+        "format": "🌡{temperatureC}°C"
+    },
+    "disk": {
+        "interval": 30,
+        "format": "󰋊 {percentage_used}%",
+        "path": "/",
+        "tooltip": true,
+        "unit": "GB",
+        "tooltip-format":  "Available {free} of {total}"
+    },
+    "memory": {
+        "interval": 10,
+        "format": "  {percentage}%",
+        "max-length": 10,
+        "tooltip": true,
+        "tooltip-format": "RAM - {used:0.1f}GiB used"
+    },
+    "wlr/taskbar": {
+        "format": "{icon} {title:.17}",
+        "icon-size": 28,
+        "spacing": 5,
+        "on-click-middle": "close",
+        "tooltip-format": "{title}",
+        "ignore-list": [],
+        "on-click": "activate"
+    },
+    "tray": {
+        "icon-size": 18,
+        "spacing": 3
+    },
+    "clock": {
+        "interval": 1,
+        "format": "{:%H:%M:%S %d.%m.%Y}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "year",
+            "mode-mon-col": 3,
+            "weeks-pos": "right",
+            "on-scroll": 1,
+            "on-click-right": "mode",
+            "format": {
+                "months": "<span color='#ffead3'><b>{}</b></span>",
+                "days": "<span color='#ecc6d9'><b>{}</b></span>",
+                "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+                "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+            }
+        },
+        "actions": {
+            "on-click-right": "mode",
+            "on-click-forward": "tz_up",
+            "on-click-backward": "tz_down",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        }
+    },
+    "network": {
+        "format-wifi": " {icon}",
+        "format-ethernet": "  ",
+        "format-disconnected": "󰌙",
+	"on-click": "$TERMINAL -e bash -c nmtui",
+        "format-icons": [
+            "󰤯 ",
+            "󰤟 ",
+            "󰤢 ",
+            "󰤢 ",
+            "󰤨 "
+        ]
+    },
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 20
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": [
+            "󰂎",
+            "󰁺",
+            "󰁻",
+            "󰁼",
+            "󰁽",
+            "󰁾",
+            "󰁿",
+            "󰂀",
+            "󰂁",
+            "󰂂",
+            "󰁹"
+        ]
+    },
+    "pulseaudio": {
+        "max-volume": 150,
+        "scroll-step": 10,
+        "format": "{icon}",
+        "tooltip-format": "{volume}%",
+        "format-muted": " ",
+        "format-icons": {
+            "default": [
+                " ",
+                " ",
+                " "
+            ]
+        },
+        "on-click": "pavucontrol"
+    },
+    "custom/dwl_layout": {
+      "exec": "~/.local/bin/waybar-dwl.sh '' layout",
+      "format": "{}",
+      "return-type": "json"
+    },
+    "custom/dwl_title": {
+      "exec": "~/.local/bin/waybar-dwl.sh '' title",
+      "format": "{}",
+      "escape": true,
+      "return-type": "json"
+    },
+    "custom/dwl_tag#0": {
+      "exec": "~/.local/bin/waybar-dwl.sh 'eDP-1' 0",
+      "format": "{}",
+      "return-type": "json"
+    },
+    "custom/dwl_tag#1": {
+      "exec": "~/.local/bin/waybar-dwl.sh 'eDP-1' 1",
+      "format": "{}",
+      "return-type": "json"
+    },
+    "custom/dwl_tag#2": {
+      "exec": "~/.local/bin/waybar-dwl.sh 'eDP-1' 2",
+      "format": "{}",
+      "return-type": "json"
+    },
+    "custom/dwl_tag#3": {
+      "exec": "~/.local/bin/waybar-dwl.sh 'eDP-1' 3",
+      "format": "{}",
+      "return-type": "json"
+    },
+    "custom/dwl_tag#4": {
+      "exec": "~/.local/bin/waybar-dwl.sh 'eDP-1' 4",
+      "format": "{}",
+      "return-type": "json"
+    },
+    "custom/dwl_tag#5": {
+      "exec": "~/.local/bin/waybar-dwl.sh 'eDP-1' 5",
+      "format": "{}",
+      "return-type": "json"
+    },
+    "custom/dwl_tag#6": {
+      "exec": "~/.local/bin/waybar-dwl.sh 'eDP-1' 6",
+      "format": "{}",
+      "return-type": "json"
+    },
+    "custom/dwl_tag#7": {
+      "exec": "~/.local/bin/waybar-dwl.sh 'DP-2' 7",
+      "format": "{}",
+      "return-type": "json"
+    },
+    "custom/dwl_tag#8": {
+      "exec": "~/.local/bin/waybar-dwl.sh 'DP-2' 8",
+      "format": "{}",
+      "return-type": "json"
+    },
+    "custom/dwl_tag#9": {
+      "exec": "~/.local/bin/waybar-dwl.sh 'DP-2' 9",
+      "format": "{}",
+      "return-type": "json"
+    }
+},
+{
+    "layer": "bottom",
+    "output": "DP-2",
+    "position": "top",
+    "mod": "dock",
+    "exclusive": true,
+    "gtk-layer-shell": true,
+    "margin-bottom": 0,
+    "passthrough": false,
+    "height": 23,
+    "modules-left": [
+        "custom/os_button",
+        "wlr/taskbar",
+        "custom/dwl_tag#0",
+        "custom/dwl_tag#1",
+        "custom/dwl_tag#2",
+        "custom/dwl_tag#3",
+        "custom/dwl_tag#4",
+        "custom/dwl_tag#5",
+        "custom/dwl_tag#6",
+        "custom/dwl_tag#7",
+        "custom/dwl_tag#8",
+        "custom/dwl_tag#9",
+        "custom/dwl_layout",
+    ],
+    "modules-center": [
+        "custom/dwl_title"
+    ],
+    "modules-right": [
+        "cpu",
+        "temperature",
+        "memory",
+        "disk",
+        "tray",
+        "pulseaudio",
+        "network",
+        "battery",
+        "clock"
+    ],
+    "custom/os_button": {
+        "format": "",
+        "on-click": "wmenu-run -l 10",
+        "tooltip": false
+    },
+    "cpu": {
+        "interval": 5,
+        "format": "  {usage}%",
+        "max-length": 10
+    },
+    "temperature": {
+        "hwmon-path-abs": "/sys/devices/platform/coretemp.0/hwmon",
+        "input-filename": "temp2_input",
+        "critical-threshold": 75,
+        "tooltip": false,
+        "format-critical": "({temperatureC}°C)",
+        "format": "🌡{temperatureC}°C"
+    },
+    "disk": {
+        "interval": 30,
+        "format": "󰋊 {percentage_used}%",
+        "path": "/",
+        "tooltip": true,
+        "unit": "GB",
+        "tooltip-format":  "Available {free} of {total}"
+    },
+    "memory": {
+        "interval": 10,
+        "format": "  {percentage}%",
+        "max-length": 10,
+        "tooltip": true,
+        "tooltip-format": "RAM - {used:0.1f}GiB used"
+    },
+    "wlr/taskbar": {
+        "format": "{icon} {title:.17}",
+        "icon-size": 28,
+        "spacing": 5,
+        "on-click-middle": "close",
+        "tooltip-format": "{title}",
+        "ignore-list": [],
+        "on-click": "activate"
+    },
+    "tray": {
+        "icon-size": 18,
+        "spacing": 3
+    },
+    "clock": {
+        "interval": 1,
+        "format": "{:%H:%M:%S %d.%m.%Y}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "year",
+            "mode-mon-col": 3,
+            "weeks-pos": "right",
+            "on-scroll": 1,
+            "on-click-right": "mode",
+            "format": {
+                "months": "<span color='#ffead3'><b>{}</b></span>",
+                "days": "<span color='#ecc6d9'><b>{}</b></span>",
+                "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+                "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+            }
+        },
+        "actions": {
+            "on-click-right": "mode",
+            "on-click-forward": "tz_up",
+            "on-click-backward": "tz_down",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        }
+    },
+    "network": {
+        "format-wifi": " {icon}",
+        "format-ethernet": "  ",
+        "format-disconnected": "󰌙",
+	"on-click": "$TERMINAL -e bash -c nmtui",
+        "format-icons": [
+            "󰤯 ",
+            "󰤟 ",
+            "󰤢 ",
+            "󰤢 ",
+            "󰤨 "
+        ]
+    },
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 20
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": [
+            "󰂎",
+            "󰁺",
+            "󰁻",
+            "󰁼",
+            "󰁽",
+            "󰁾",
+            "󰁿",
+            "󰂀",
+            "󰂁",
+            "󰂂",
+            "󰁹"
+        ]
+    },
+    "pulseaudio": {
+        "max-volume": 150,
+        "scroll-step": 10,
+        "format": "{icon}",
+        "tooltip-format": "{volume}%",
+        "format-muted": " ",
+        "format-icons": {
+            "default": [
+                " ",
+                " ",
+                " "
+            ]
+        },
+        "on-click": "pavucontrol"
+    },
+    "custom/dwl_layout": {
+      "exec": "~/.local/bin/waybar-dwl.sh '' layout",
+      "format": "{}",
+      "return-type": "json"
+    },
+    "custom/dwl_title": {
+      "exec": "~/.local/bin/waybar-dwl.sh '' title",
+      "format": "{}",
+      "escape": true,
+      "return-type": "json"
+    },
+    "custom/dwl_tag#0": {
+      "exec": "~/.local/bin/waybar-dwl.sh 'DP-2' 0",
+      "format": "{}",
+      "return-type": "json"
+    },
+    "custom/dwl_tag#1": {
+      "exec": "~/.local/bin/waybar-dwl.sh 'DP-2' 1",
+      "format": "{}",
+      "return-type": "json"
+    },
+    "custom/dwl_tag#2": {
+      "exec": "~/.local/bin/waybar-dwl.sh 'DP-2' 2",
+      "format": "{}",
+      "return-type": "json"
+    },
+    "custom/dwl_tag#3": {
+      "exec": "~/.local/bin/waybar-dwl.sh 'DP-2' 3",
+      "format": "{}",
+      "return-type": "json"
+    },
+    "custom/dwl_tag#4": {
+      "exec": "~/.local/bin/waybar-dwl.sh 'DP-2' 4",
+      "format": "{}",
+      "return-type": "json"
+    },
+    "custom/dwl_tag#5": {
+      "exec": "~/.local/bin/waybar-dwl.sh 'DP-2' 5",
+      "format": "{}",
+      "return-type": "json"
+    },
+    "custom/dwl_tag#6": {
+      "exec": "~/.local/bin/waybar-dwl.sh 'DP-2' 6",
+      "format": "{}",
+      "return-type": "json"
+    },
+    "custom/dwl_tag#7": {
+      "exec": "~/.local/bin/waybar-dwl.sh 'DP-2' 7",
+      "format": "{}",
+      "return-type": "json"
+    },
+    "custom/dwl_tag#8": {
+      "exec": "~/.local/bin/waybar-dwl.sh 'DP-2' 8",
+      "format": "{}",
+      "return-type": "json"
+    },
+    "custom/dwl_tag#9": {
+      "exec": "~/.local/bin/waybar-dwl.sh 'DP-2' 9",
+      "format": "{}",
+      "return-type": "json"
+    }
+}
+]
