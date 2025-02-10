@@ -208,17 +208,17 @@
       "return-type": "json"
     },
     "custom/dwl_tag#7": {
-      "exec": "~/.local/bin/waybar-dwl.sh 'DP-2' 7",
+      "exec": "~/.local/bin/waybar-dwl.sh 'eDP-1' 7",
       "format": "{}",
       "return-type": "json"
     },
     "custom/dwl_tag#8": {
-      "exec": "~/.local/bin/waybar-dwl.sh 'DP-2' 8",
+      "exec": "~/.local/bin/waybar-dwl.sh 'eDP-1' 8",
       "format": "{}",
       "return-type": "json"
     },
     "custom/dwl_tag#9": {
-      "exec": "~/.local/bin/waybar-dwl.sh 'DP-2' 9",
+      "exec": "~/.local/bin/waybar-dwl.sh 'eDP-1' 9",
       "format": "{}",
       "return-type": "json"
     }
