@@ -16,6 +16,7 @@ alias vnc='remmina'
 alias castget='castget -C ~/.config/castget/castget.conf'
 alias news='newsboat'
 alias burncd='asunder'
+alias kreya='WEBKIT_DISABLE_DMABUF_RENDERER=1 kreya'
 
 alias ll="ls -l --color"
 

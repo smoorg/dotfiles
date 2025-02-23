@@ -68,3 +68,49 @@ paths=$(echo ${sources[*]} | tr ' ' :)
 
 export PATH=$PATH:$paths
 source /usr/share/git/git-prompt.sh
+
+# color
+txtblk='\e[0;30m' # Black - Regular
+txtred='\e[0;31m' # Red
+txtgrn='\e[0;32m' # Green
+txtylw='\e[0;33m' # Yellow
+txtblu='\e[0;34m' # Blue
+txtpur='\e[0;35m' # Purple
+txtcyn='\e[0;36m' # Cyan
+txtwht='\e[0;37m' # White
+txtrst='\e[0m'    # Text Reset
+
+# bold
+bldblk='\e[1;30m' # Black - Bold
+bldred='\e[1;31m' # Red
+bldgrn='\e[1;32m' # Green
+bldylw='\e[1;33m' # Yellow
+bldblu='\e[1;34m' # Blue
+bldpur='\e[1;35m' # Purple
+bldcyn='\e[1;36m' # Cyan
+bldwht='\e[1;37m' # White
+
+# underscore
+unkblk='\e[4;30m' # Black - Underline
+undred='\e[4;31m' # Red
+undgrn='\e[4;32m' # Green
+undylw='\e[4;33m' # Yellow
+undblu='\e[4;34m' # Blue
+undpur='\e[4;35m' # Purple
+undcyn='\e[4;36m' # Cyan
+undwht='\e[4;37m' # White
+
+# background
+bgblk='\e[40m'   # Black - Background
+bgred='\e[41m'   # Red
+bggrn='\e[42m'   # Green
+bgylw='\e[43m'   # Yellow
+bgblu='\e[44m'   # Blue
+bgpur='\e[45m'   # Purple
+bgcyn='\e[46m'   # Cyan
+bgwht='\e[47m'   # White
+
+next=""
+
+PS1="\[\033[44;30m\]\u@\h \[\033[41;34m\]$next \[\033[41;30m\]\w \[\033[31;43m\]$next\[\033[43;30m\]\$(__git_ps1) \[\033[0;33m\]$next\[\033[0;37m\]\n\$\[\033[0m\] "
+
