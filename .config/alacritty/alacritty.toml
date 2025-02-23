@@ -5,13 +5,13 @@ background = "#000000"
 size = 13
 
 [font.bold]
-family = "JetBrains Mono"
+family = "JetBrains Mono Nerd Font"
 
 [font.italic]
-family = "Jetbrains Mono"
+family = "JetBrains Mono Nerd Font"
 
 [font.normal]
-family = "Jetbrains Mono"
+family = "JetBrains Mono Nerd Font"
 
 [[keyboard.bindings]]
 action = "IncreaseFontSize"
