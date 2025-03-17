@@ -15,7 +15,6 @@ export DOTNET_TOOLS=$HOME/.dotnet/tools
 if [ -x yarn ]; then
   YARN_GLOBAL=$(yarn global bin)
   source /usr/share/nvm/init-nvm.sh
-fi
 
 # ruby
 if [ `tty` = /dev/tty1 ]; then
