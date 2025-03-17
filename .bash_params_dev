@@ -12,15 +12,18 @@ fi
 export DOTNET_TOOLS=$HOME/.dotnet/tools
 
 # javascript
-export YARN_GLOBAL=$(yarn global bin)
-source /usr/share/nvm/init-nvm.sh
+if [ -x yarn ]; then
+  YARN_GLOBAL=$(yarn global bin)
+  source /usr/share/nvm/init-nvm.sh
+fi
 
 # ruby
 export GEM_HOME=$HOME/.cache/gem
 export RVM="$HOME/.rvm/bin"
 # Load Ruby Version Manager (RVM) into a shell session *as a function*
-if [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
-    source "$HOME/.rvm/scripts/rvm" 
+if [[ -s "/usr/share/rvm/scripts/rvm" ]]; then
+    export PATH="$PATH:$HOME/.rvm/bin"
+    source "/usr/share/rvm/scripts/rvm" 
     rvm use 2.7.7
     # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 fi
