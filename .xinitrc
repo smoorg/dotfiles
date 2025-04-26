@@ -20,15 +20,6 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-# external monitor
-[ -x $SCRIPTS_DIR/screen/moncon ] && $SCRIPTS_DIR/screen/moncon &
-
-# background
-[ -f $WALLPAPER_DIR ] && [ -x $SCRIPTS_DIR/screen/setwall ] && $SCRIPTS_DIR/screen/setwall &
-
-# search for all repositories
-[ -x $SCRIPTS_DIR/git/repocd ] && $SCRIPTS_DIR/git/repocd &
-
 # notifications process
 dunst > /dev/null 2>&1 &
 
@@ -50,5 +41,19 @@ done  &
 # window manager
 #java param to work with webstorm 
 #export _JAVA_AWT_WM_NONREPARENTING=1
+# execute script dir + all following flags
 
-[ -x "$SCRIPTS_DIR/startdwm" ] && startdwm || /usr/local/bin/dwm
+execute() {
+    [ -x $1 ] && $@ &
+}
+
+# connect monitor, set wallpaper, set resolution
+execute $SCRIPTS_DIR/screen/moncon
+execute $SCRIPTS_DIR/screen/setwall
+execute $SCRIPTS_DIR/screen/swapres eDP-1 2880x1920 120 0.5
+
+# traverse repositories for cache in cdrepo alias
+execute $SCRIPTS_DIR/git/repocd
+
+# run dwm
+execute $SCRIPTS_DIR/startdwm
