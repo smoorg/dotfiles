@@ -16,14 +16,16 @@ if [ -x yarn ]; then
 fi
 
 # ruby
-export GEM_HOME=$HOME/.cache/gem
-# Load Ruby Version Manager (RVM) into a shell session *as a function*
-if [[ -s "/usr/share/rvm/scripts/rvm" ]]; then
-    export PATH="$PATH:$HOME/.rvm/bin"
-    source "/usr/share/rvm/scripts/rvm" 
-    rvm use 2.7.7
-    # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-    RVM="$PATH:$HOME/.rvm/bin"
+if [ `tty` = /dev/tty1 ]; then
+    export GEM_HOME=$HOME/.cache/gem
+    # Load Ruby Version Manager (RVM) into a shell session *as a function*
+    if [[ -s "/usr/share/rvm/scripts/rvm" ]]; then
+        export PATH="$PATH:$HOME/.rvm/bin"
+        source "/usr/share/rvm/scripts/rvm" 
+        rvm use 2.7.7
+        # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+        RVM="$PATH:$HOME/.rvm/bin"
+    fi
 fi
 
 # golang
