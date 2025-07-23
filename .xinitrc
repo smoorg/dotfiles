@@ -1,15 +1,15 @@
 #!/bin/sh
-setxkbmap pl
 # dirs
 
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
-sysresources=/etc/X11/xinit/.Xresources
+sysresources=$HOME/.Xresources
 sysmodmap=/etc/X11/xinit/.Xmodmap
 
 [ -f $sysresources ] 	&& xrdb -merge $sysresources
 [ -f $sysmodmap ] 	&& xmodmap $sysmodmap
-[ -f "$userresources" ] && xrdb -merge "$userresources"
+#[ -f "$userresources" ] && xrdb -merge "$userresources"
+[ -f "$userresources" ] && xrdb -screen "$userresources"
 [ -f "$usermodmap" ]	&& xmodmap "$usermodmap"
 [ -f "$xbindkeys" ]	&& xbindkeys -f $xbindkeys
 
@@ -19,6 +19,9 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  done
  unset f
 fi
+
+# gpg
+gpg-agent > /dev/null 2>&1 &
 
 # notifications process
 dunst > /dev/null 2>&1 &
@@ -43,6 +46,8 @@ done  &
 #export _JAVA_AWT_WM_NONREPARENTING=1
 # execute script dir + all following flags
 
+setxkbmap pl
+
 execute() {
     [ -x $1 ] && $@ &
 }
@@ -56,4 +61,4 @@ execute $SCRIPTS_DIR/screen/swapres eDP-1 2880x1920 120 0.5
 execute $SCRIPTS_DIR/git/repocd
 
 # run dwm
-execute $SCRIPTS_DIR/startdwm
+[ -x $SCRIPTS_DIR/startdwm ] && startdwm || /usr/local/dwm
