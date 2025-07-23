@@ -1,8 +1,5 @@
 #!/bin/sh
 
-# golang
-export GOBIN=$HOME/.local/share/go/bin
-export GOPRIVATE=gitlab.com/readly-ab/*
 
 # 3ds devkit
 export DEVKITPRO=/opt/devkitpro
@@ -29,8 +26,9 @@ if [[ -s "/usr/share/rvm/scripts/rvm" ]]; then
     RVM="$PATH:$HOME/.rvm/bin"
 fi
 
-# go
-export GOPRIVATE=gitlab.com/readly-ab/*
+# golang
+export GOBIN=$HOME/.local/share/go/bin
+export GOPRIVATE=gitlab.com/readly-ab,gitlab.com/readly-ab/*,go.bufbuild,buf.build,buf.build/gen/go
 # direnv (recognizes .envrc files)
 eval "$(direnv hook bash)"
 
