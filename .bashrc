@@ -12,6 +12,8 @@ sourcefile /usr/share/git/completion/git-completion.bash
 sourcefile /usr/share/bash-completion/bash_completion
 
 if [ `tty` = /dev/tty1 ]; then
-    ssh-agent startx
+#    ssh-agent startx
+ssh-agent
+./river.sh
 fi
 
