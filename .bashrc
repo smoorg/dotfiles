@@ -13,7 +13,8 @@ sourcefile /usr/share/git/completion/git-completion.bash
 sourcefile /usr/share/bash-completion/bash_completion
 sourcefile $XDG_CONFIG_HOME/.dart-cli-completion/bash-config.bash || true
 
-if [ `tty` = /dev/tty1 ]; then
-    ./dwl.sh
-fi
+#if [ `tty` = /dev/tty1 ]; then
+    #ssh-agent startx
+    #./dwl.sh
+#fi
 
