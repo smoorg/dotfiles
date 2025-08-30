@@ -1,0 +1,87 @@
+[a-general]
+ansi = true
+auto_redirect = false
+bullets = true
+color = false
+downloads = ''
+highlight_code = true
+highlight_style = 'monokai'
+home = 'gemini://gemini.circumlunar.space'
+http = 'default'
+left_margin = 0.15
+max_width = 100
+page_max_size = 2097152
+page_max_time = 10
+scrollbar = 'auto'
+search = 'gemini://geminispace.info/search'
+show_link = false
+temp_downloads = ''
+underline = true
+[cache]
+max_pages = 30
+max_size = 0
+timeout = 1800
+
+[keybindings]
+bind_add_bookmark = 'Ctrl-D'
+bind_add_sub = 'Ctrl-X'
+bind_back = ['b', 'Alt-Left']
+bind_beginning = ['Home', 'g']
+bind_bookmarks = 'Ctrl-B'
+bind_bottom = 'Space'
+bind_close_tab = 'Ctrl-W'
+bind_copy_page_url = 'C'
+bind_copy_target_url = 'c'
+bind_edit = 'e'
+bind_end = ['End', 'G']
+bind_forward = ['f', 'Alt-Right']
+bind_help = '?'
+bind_home = 'Backspace'
+bind_link0 = '0'
+bind_link1 = '1'
+bind_link2 = '2'
+bind_link3 = '3'
+bind_link4 = '4'
+bind_link5 = '5'
+bind_link6 = '6'
+bind_link7 = '7'
+bind_link8 = '8'
+bind_link9 = '9'
+bind_movedown = 'j'
+bind_moveleft = 'h'
+bind_moveright = 'l'
+bind_moveup = 'k'
+bind_new_tab = 'Ctrl-T'
+bind_next_tab = 'F2'
+bind_pgdn = ['PgDn', 'd']
+bind_pgup = ['PgUp', 'u']
+bind_prev_tab = 'F1'
+bind_quit = ['Ctrl-C', 'Ctrl-Q', 'Q']
+bind_reload = ['R', 'Ctrl-R']
+bind_save = 'Ctrl-S'
+bind_sub = 'Ctrl-A'
+bind_tab0 = ')'
+bind_tab1 = '!'
+bind_tab2 = '@'
+bind_tab3 = '#'
+bind_tab4 = '$'
+bind_tab5 = '%'
+bind_tab6 = '^'
+bind_tab7 = '&'
+bind_tab8 = '*'
+bind_tab9 = '('
+bind_url_handler_open = 'Ctrl-U'
+shift_numbers = ''
+
+[subscriptions]
+entries_per_page = 20
+header = true
+popup = true
+update_interval = 1800
+workers = 3
+
+[url-handlers]
+other = 'default'
+
+[url-prompts]
+other = false

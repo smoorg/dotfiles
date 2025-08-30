@@ -1,56 +1,63 @@
-@define-color foreground #eff0f1;
-@define-color foreground-inactive #7f8c8d;
-@define-color background #232629;
-@define-color background-alt #31363b;
+/* gtk theme */
+@define-color font-color #fff;
+@define-color background-color #000;
+@define-color focus-bg-color #111;
 
 * {
-    font-family: Mononoki Nerd Font;
-    font-size: 13px;
-    padding: 0;
-    margin: 0 0 0 0;
+    font-family: JetBrains Mono, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 15px;
 }
 
-#waybar {
-    color: @foreground;
-    background-color: @background;
+.modules-right {
+margin-left: 5rem;
 }
 
-#workspaces button {
-    padding-left: 1em;
-    padding-right: 1.3em;
+window#waybar {
+    background-color: @background-color;
+    color: @font-color;
+    transition-property: background-color;
+    transition-duration: .5s;
 }
 
-#workspaces button.empty {
-    color: @foreground-inactive;
+#tags {
+    padding: 5px 0;
 }
 
-#workspaces button.active {
-    background-color: @background-alt;
-    border-radius: 3px;
+#tags button {
+    color: @background-color;
 }
 
-#wireplumber,
-#bat,
-#tray,
-#usage,
-#net {
-    background-color: @background-alt;
-    border-radius: 3px;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    margin-left: 0.3em;
+/* focused */
+#tags button.focused {
+    background-color: @focus-bg-color;
 }
 
+#tags button.focused {
+    color: @font-color;
+}
+
+/* occupied */
+#tags button.occupied {
+    color: @font-color;
+}
+
+#clock,
+#battery,
 #cpu,
-#temperature,
 #memory,
-#language,
 #disk,
+#temperature,
+#backlight,
 #network,
-#battery {
-    margin-right: 0.8em;
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#mpd {
+    padding: 0 10px;
+    color: #ffffff;
 }
-
-/*#custom-dwl_tag.active { content: "\F005"; white-space: pre; }*/
-#custom-dwl_tag.urgent { color: red; }
-#custom-dwl_tag.selected { color: #017AAF; }

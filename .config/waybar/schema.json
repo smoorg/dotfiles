@@ -1,0 +1,70 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "waybar",
+    "title": "waybar",
+    "description": "JSON schema for waybar configuration",
+    "type": "object",
+    "properties": {
+        "layer": {
+            "type": "string",
+            "description": "Waybar at top layer"
+        },
+        "position": {
+            "type": "string",
+            "description": "Waybar position (top|bottom|left|right)"
+        },
+        "height": {
+            "type": "integer",
+            "description": "Waybar height (to be removed for auto height)"
+        },
+        "width": {
+            "type": "integer",
+            "description": ""
+        },
+        "spacing": {
+            "type": "integer",
+            "description": ""
+        },
+        "modules-left": {
+            "type": "array",
+            "description": "Choose order of the modules at the beginning of the bar"
+        },
+        "modules-center": {
+            "type": "string",
+            "description": "Choose order of the modules at the center of the bar"
+        },
+        "modules-right": {
+            "type": "string",
+            "description": "Choose order of the modules at the end of the bar"
+        },
+        "keyboard-state": {
+            "type": "object",
+            "description": "",
+            "properties": {
+                "numlock": {
+                    "type": "boolean"
+                },
+                "capslock": {
+                    "type": "boolean"
+                },
+                "format": {
+                    "type": "string",
+                    "description": "i.e. \"{name} {icon}\""
+                },
+                "format-icons": {
+                    "type": "object",
+                    "properties": {
+                        "locked": {
+                            "type": "string",
+                            "description": "icon for locked"
+                        },
+                        "unlocked": {
+                            "type": "string",
+                            "description": "icon for unlocked"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
