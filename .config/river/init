@@ -174,9 +174,15 @@ riverctl map normal Super T keyboard-layout se
 riverctl keyboard-layout pl
 
 riverctl map normal Super E spawn 'emotes'
+riverctl map normal Super Tab focus-previous-tags
 
 # screencasting
 systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river
 systemctl --user restart xdg-desktop-portal
 
+wlr-randr --output eDP-1 --scale 2
+
+external_screen=$(wlr-randr | grep "^DP-" | cut -d " " -f1)
+internal_screen=$(wlr-randr | grep "^eDP-" | cut -d " " -f1)
+[ -n "$internal_screen" -a -n "$external_screen" ] && wlr-randr --output $external_screen --right-of $internal_screen

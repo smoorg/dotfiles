@@ -4,12 +4,15 @@
 @define-color focus-bg-color #111;
 
 * {
-    font-family: JetBrains Mono, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 15px;
+    font-family: "JetBrains Mono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1.5rem;
 }
 
 .modules-right {
-margin-left: 5rem;
+    margin: 5px;
+}
+.modules-center, .modules-middle {
+    margin: 5px;
 }
 
 window#waybar {
@@ -41,23 +44,7 @@ window#waybar {
     color: @font-color;
 }
 
-#clock,
-#battery,
-#cpu,
-#memory,
-#disk,
-#temperature,
-#backlight,
-#network,
-#pulseaudio,
-#wireplumber,
-#custom-media,
-#tray,
-#mode,
-#idle_inhibitor,
-#scratchpad,
-#power-profiles-daemon,
-#mpd {
-    padding: 0 10px;
+#clock, #battery, #cpu, #memory, #disk, #temperature, #backlight, #network, #pulseaudio, #wireplumber, #custom-media, #tray, #mode, #idle_inhibitor, #scratchpad, #power-profiles-daemon, #mpd {
+    margin-right:15px;
     color: #ffffff;
 }
