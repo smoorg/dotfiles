@@ -2,7 +2,7 @@
 background = "#000000"
 
 [font]
-size = 9
+size = 13
 
 [font.bold]
 family = "JetBrains Mono Nerd Font"
@@ -29,4 +29,4 @@ key = "J"
 mods = "Control|Shift"
 
 [window]
-opacity = 0.9
+opacity = 0.8
