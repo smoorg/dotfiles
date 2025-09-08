@@ -133,15 +133,15 @@ do
     riverctl map $mode None XF86AudioNext  spawn 'playerctl next'
 
     # Control screen backlight brightness with brightnessctl (https://github.com/Hummer12007/brightnessctl)
-    riverctl map $mode None XF86MonBrightnessUp   spawn 'brightnessctl set +5%'
-    riverctl map $mode None XF86MonBrightnessDown spawn 'brightnessctl set 5%-'
+    riverctl map $mode None XF86MonBrightnessUp   spawn 'light 5'
+    riverctl map $mode None XF86MonBrightnessDown spawn 'light -5'
 
     riverctl map $mode None XF86PrintScreen spawn 'screenshot'
 done
 
 # Set background and border color
 riverctl background-color 0x002b36
-riverctl border-color-focused 0x93a1a1
+riverctl border-color-focused 0xf9b302
 riverctl border-color-unfocused 0x586e75
 
 # Set keyboard repeat rate
@@ -169,12 +169,16 @@ riverctl spawn waybar
 riverctl map normal Super+Shift S spawn 'screenshot'
 
 # lang
-riverctl map normal Super R keyboard-layout pl
-riverctl map normal Super T keyboard-layout se
+riverctl map normal Super+Shift R keyboard-layout pl
+riverctl map normal Super+Shift T keyboard-layout se
 riverctl keyboard-layout pl
 
 riverctl map normal Super E spawn 'emotes'
+riverctl map normal Super+Alt L spawn 'gtklock'
 riverctl map normal Super Tab focus-previous-tags
+riverctl rule-add -app-id firefox ssd
+riverctl rule-add -app-id fluffychat ssd
+riverctl rule-add -app-id org.gnome.seahorse.Application ssd
 
 # screencasting
 systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP

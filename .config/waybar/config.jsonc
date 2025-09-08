@@ -5,7 +5,6 @@
 		"custom/media"
 	],
 	"modules-center": [
-		"river/window",
 		"clock"
 	],
 	"modules-right": [
