@@ -33,9 +33,13 @@ export NOTMUCH_CONFIG=$HOME/.config/notmuch-config
 export TMUX_CONFIG=$XDG_CONFIG_HOME/tmux
 
 # ssh
-export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
-export SSH_ASKPASS=/usr/lib/ssh/x11-ssh-askpass
-export PINENTRY=/usr/lib/ssh/x11-ssh-askpass
+#export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
+#export SSH_AUTH_SOCK=/run/user/$(id -u)/keyring/ssh
+export SSH_AUTH_SOCK=/run/user/$(id -u)/gcr/ssh
+#export SSH_ASKPASS=/usr/lib/ssh/x11-ssh-askpass
+#export PINENTRY=/usr/lib/ssh/x11-ssh-askpass
+export SSH_ASKPASS=/usr/lib/seahorse/ssh-askpass
+export PINENTRY=/usr/bin/pinentry-gnome3
 
 # app specific
 export LYNX_CFG=$HOME/.config/lynx/lynx.cfg
