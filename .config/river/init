@@ -12,7 +12,7 @@ riverctl map normal Super+Shift E exit
 
 # menu
 riverctl map normal Super P spawn wmenu-run
-riverctl map normal Super D spawn nwg-drawer
+#riverctl map normal Super D spawn nwg-drawer
 
 # Super+J and Super+K to focus the next/previous view in the layout stack
 riverctl map normal Super J focus-view next
@@ -39,8 +39,8 @@ riverctl map normal Super H send-layout-cmd rivertile "main-ratio -0.05"
 riverctl map normal Super L send-layout-cmd rivertile "main-ratio +0.05"
 
 # Super+Shift+H and Super+Shift+L to increment/decrement the main count of rivertile(1)
-riverctl map normal Super+Shift H send-layout-cmd rivertile "main-count +1"
-riverctl map normal Super+Shift L send-layout-cmd rivertile "main-count -1"
+riverctl map normal Super+Shift I send-layout-cmd rivertile "main-count +1"
+riverctl map normal Super+Shift D send-layout-cmd rivertile "main-count -1"
 
 # Super+Alt+{H,J,K,L} to move views
 riverctl map normal Super+Alt H move left 100
