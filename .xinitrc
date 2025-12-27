@@ -55,7 +55,7 @@ execute() {
 # connect monitor, set wallpaper, set resolution
 execute $SCRIPTS_DIR/screen/moncon
 execute $SCRIPTS_DIR/screen/setwall
-execute $SCRIPTS_DIR/screen/swapres eDP-1 2880x1920 120 0.5
+#execute $SCRIPTS_DIR/screen/swapres eDP-1 2880x1920 120 0.5
 
 # traverse repositories for cache in cdrepo alias
 execute $SCRIPTS_DIR/git/repocd

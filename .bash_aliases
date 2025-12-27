@@ -17,6 +17,7 @@ alias castget='castget -C ~/.config/castget/castget.conf'
 alias news='newsboat'
 alias burncd='asunder'
 alias kreya='WEBKIT_DISABLE_DMABUF_RENDERER=1 kreya'
+alias bpl='buf push --label'
 
 alias ll="ls -l --color"
 
