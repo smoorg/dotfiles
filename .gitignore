@@ -6,135 +6,39 @@ Games
 Desktop
 Thrash
 
-# cache
-.cache
-.castget/
-.texlive/
-.mozilla/
-.pulse-cookie
-.wget-hsts
-.zoom
-.hasura
-.pki
-.surf
-
 # dev environment
-.cargo/
-.cmake/
-.docker/
-.java/
-.mongodb/
 go/
 
 # js
 .angular-config.json
 node_modules/
-.npmrc
-.npm/
-.yarnrc
 yarn.lock
-.yarn/
-.vscode/
-.vscode-oss/
-
-# ruby
-.bundle/
-.gem/
-.rvm/
-
-# csharp configs
-.aspnet/
-.dotnet/
-.mono/
-.nuget/
-.vsts/
-.local/share/NuGet/
-
-# dotnet templates cache
-.templateengine/
-
-# hosting
-.vagrant
-.ngrok2
 
 # gaming
-.dosbox/
-.steam/
-.paradoxlauncher/
-.steampath
-.steampid
-.local/share/Steam/
-.local/share/Paradox\ Interactive/
-.local/share/vulkan/
-.wine
 Games/
 My Games/
 
 
 # audio
-.ncmpcpp/
 mpv/
-.jackdrc
-
-# electron garbage
-.electron-gyp/
-
-# gnome garbage
-.local/share/gnome*
-.gnome
 
 # JetBrains
 CLionProjects/
 WebstormProjects/
-.local/share/JetBrains
-
-# CodeTogether
-.codetogether/
-.ctsystem
 
 # Freetube files
 freetube/
 freetube-bin/
 
-# history files
-.python_history
-.mysql_history
-.psql_history
-.sqlite_history
-.nmcli_history
-.lesshst
-.node_repl_history
-*_history
-
-# bash files
-.Xauthority
-.bash_history*
-.bash_logout
-.bash_aliases_priv
-.bash_params_priv
-
+.*
 # private config
-.config/*
-!.config/lynx/lynx.cfg
-!.config/tmux/
-!.config/alacritty/
-!.config/ranger/rifle.conf
-!.config/mimeapps.list
+!.config/
 scripts/local/
-.gnupg
-.mozilla/
-.password-store/
-.purple/
-.task/
-.taskrc
 
 # remmina
 remmina_log
 
 # mail files
-.mbsyncrc
-.notmuch-config
-.abook/
 mail/
 sent/
 
@@ -156,9 +60,7 @@ OneDrive/
 Videos
 Videos/
 Monero/
-.bitmonero/
 DAW/
-.local/
 tmp/
 .gitconfig
 
@@ -171,7 +73,6 @@ tmp/
 *.webm
 
 # ignore secret files ALWAYS
-.ssh/
 *.gpg
 *.rsa
 *_rsa.pub
@@ -180,13 +81,3 @@ tmp/
 
 # log files
 *.log
-
-# nvidia
-.nv/
-.nvidia-settings-rc
-
-# nvim/vim cache
-.vim/
-.viminfo
-.local/nvim
-.NERDTree*
