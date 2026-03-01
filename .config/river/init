@@ -167,9 +167,10 @@ riverctl spawn waybar
 
 # screenshot
 riverctl map normal Super+Shift S spawn 'screenshot'
+riverctl map normal Super+Shift R spawn 'record'
 
 # lang
-riverctl map normal Super+Shift R keyboard-layout pl
+riverctl map normal Super+Shift P keyboard-layout pl
 riverctl map normal Super+Shift T keyboard-layout se
 riverctl keyboard-layout pl
 
