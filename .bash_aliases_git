@@ -32,12 +32,13 @@ alias gs='git status'
 alias gcm='git commit'
 alias gcma='git commit --amend'
 alias gcmane='git commit --amend --no-edit'
+alias gan='git commit --amend --no-edit'
 
 # rebase
 alias gr='git rebase --commiter-date-is-author-date'
 alias grc='git rebase --continue'
 alias gra='git rebase --abort'
-alias grm='git fetch && git rebase origin/$(git branch --list | grep -E "main|master" | tr -d " ")'
+alias grom='git fetch && git rebase origin/$(git branch --list | grep -E "main|master" | tr -d " ")'
 
 # reset
 alias grp='git reset -p'
