@@ -18,7 +18,8 @@ if [ -x yarn ]; then
 fi
 
 # ruby
-if [ `tty` = /dev/tty1 ]; then
+RVM=""
+if [ `tty` = /dev/tty1 -a -x ruby -a -x rvm ]; then
     export GEM_HOME=$HOME/.cache/gem
     # Load Ruby Version Manager (RVM) into a shell session *as a function*
     if [[ -s "/usr/share/rvm/scripts/rvm" ]]; then
@@ -27,12 +28,14 @@ if [ `tty` = /dev/tty1 ]; then
         rvm use 2.7.7
         # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
         RVM="$PATH:$HOME/.rvm/bin"
+
+	sourcefile $HOME/.cache/yay/rvm/rvm.sh
     fi
 fi
 
 # golang
 export GOBIN=$HOME/.local/share/go/bin
-export GOPRIVATE=gitlab.com/readly-ab,gitlab.com/readly-ab/*,go.bufbuild,buf.build,buf.build/gen/go
+export GOPRIVATE=go.bufbuild,buf.build,buf.build/gen/go
 # direnv (recognizes .envrc files)
 eval "$(direnv hook bash)"
 

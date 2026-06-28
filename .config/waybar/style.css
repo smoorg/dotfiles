@@ -44,7 +44,11 @@ window#waybar {
     color: @font-color;
 }
 
-#clock, #battery, #cpu, #memory, #disk, #temperature, #backlight, #network, #pulseaudio, #wireplumber, #custom-media, #tray, #mode, #idle_inhibitor, #scratchpad, #power-profiles-daemon, #mpd {
+#custom-weather #clock, #battery, #cpu, #memory, #disk, #temperature, #backlight, #network, #pulseaudio, #wireplumber, #custom-media, #tray, #mode, #idle_inhibitor, #scratchpad, #power-profiles-daemon, #mpd {
     margin-right:15px;
     color: #ffffff;
+}
+
+#custom-weather {
+    margin-top: 10px;
 }

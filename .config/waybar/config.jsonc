@@ -5,12 +5,14 @@
 		"custom/media"
 	],
 	"modules-center": [
-		"clock"
+		"clock",
+		"custom/weather"
 	],
 	"modules-right": [
 		"network",
 		"mpd",
 		"pulseaudio",
+		"temperature",
 		"backlight",
 		"cpu",
 		"memory",
@@ -60,7 +62,7 @@
 	},
 	"clock": {
 		"interval": 1,
-		"format": "  {:%Y-%m-%d %H:%M:%S}",
+		"format": "  {:%H:%M:%S}",
 		"format-alt": "{:%Y-%m-%d}"
 	},
 	"cpu": {
@@ -145,5 +147,11 @@
 		"escape": true,
 		"exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
 		// "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+	},
+	"custom/weather": {
+	    "interval": 15,
+	    "format": "{}°C",
+	    "max-length": 12,
+	    "exec": "sb-weather"
 	}
 }

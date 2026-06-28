@@ -12,7 +12,7 @@ riverctl map normal Super+Shift E exit
 
 # menu
 riverctl map normal Super P spawn wmenu-run
-#riverctl map normal Super D spawn nwg-drawer
+riverctl map normal Super D spawn nwg-drawer
 
 # Super+J and Super+K to focus the next/previous view in the layout stack
 riverctl map normal Super J focus-view next

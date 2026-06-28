@@ -17,7 +17,7 @@ export MEDIA_DIR=$HOME/Music
 export WALLPAPER_FILE=$HOME/.local/wallpaper.png
 
 # configurations
-export TERM=xterm
+export TERM=xterm-256color
 export TERMINAL=alacritty
 export LANG=pl_PL.UTF-8
 export LANGUAGE=pl_PL.UTF-8
