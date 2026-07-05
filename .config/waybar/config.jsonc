@@ -10,7 +10,6 @@
 	],
 	"modules-right": [
 		"network",
-		"mpd",
 		"pulseaudio",
 		"temperature",
 		"backlight",
@@ -21,34 +20,6 @@
 	],
 	"sway/mode": {
 		"format": "<span style=\"italic\">{}</span>"
-	},
-	"mpd": {
-		//"format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ ",
-		"format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S})",
-		"format-disconnected": "Disconnected ",
-		"format-stopped": "",
-		"unknown-tag": "N/A",
-		"interval": 2,
-		"consume-icons": {
-			"on": " "
-		},
-		"random-icons": {
-			"off": "<span color=\"#f53c3c\"></span> ",
-			"on": " "
-		},
-		"repeat-icons": {
-			"on": " "
-		},
-		"single-icons": {
-			"on": "1 "
-		},
-		"state-icons": {
-			"paused": "",
-			"playing": ""
-		},
-		"tooltip-format": "MPD (connected)",
-		"tooltip-format-disconnected": "MPD (disconnected)",
-		"on-click": "mpc toggle"
 	},
 	"idle_inhibitor": {
 		"format": "{icon}",
@@ -149,9 +120,8 @@
 		// "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
 	},
 	"custom/weather": {
-	    "interval": 15,
-	    "format": "{}°C",
-	    "max-length": 12,
+	    "interval": 10,
+	    "format": "{text}°C",
 	    "exec": "sb-weather"
 	}
 }

@@ -50,5 +50,7 @@ window#waybar {
 }
 
 #custom-weather {
-    margin-top: 10px;
+    /*margin-top: 10px;*/
+    /* padding: 0.3rem 0.6rem; */
+    /* margin: 0.4rem 0.25rem; */
 }
