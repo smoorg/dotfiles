@@ -1,0 +1,50 @@
+history-limit 0 
+max-items 0
+reload-threads 100
+
+bind-key q quit
+bind-key h quit
+bind-key j down
+bind-key k up
+bind-key l open
+bind-key [ prev-feed
+bind-key ] next-feed
+bind-key g home
+bind-key G end
+bind-key SPACE macro-prefix 
+bind-key b bookmark 
+bind-key ^F pagedown 
+bind-key ^B pageup 
+bind-key ^H toggle-show-read-feeds 
+
+# colors
+# col # item              # fg      # bg
+color background          color7   default        # the most bottom bar
+color listnormal          color7   default        # unfocused and without N
+color listnormal_unread   color7   default        # unfocused and with N
+color listfocus           color7   color5   bold  # focused and without N
+color listfocus_unread    color7   color5   bold  # focused but with N
+color info                color0   color1         # bottom and top info bars
+color article             color7   default        # content of an article
+
+# highlights
+highlight article "^(Feed|Link):.*$" color6 default bold
+highlight article "^(Title|Date|Author):.*$" color6 default bold
+highlight article "https?://[^ ]+" color10 default underline
+highlight article "\\[[0-9]+\\]" color10 default bold
+highlight article "\\[image\\ [0-9]+\\]" color10 default bold
+
+# 720p play
+macro 7 set browser "setsid --fork mpv --ytdl-format=\"bestvideo[height<=720]+bestaudio/best\" %u > /dev/null 2>&1"; open-in-browser; set browser "xdg-open %u";
+# 360p play
+macro 3 set browser "setsid --fork mpv --ytdl-format=\"bestvideo[height<=360]+bestaudio/best\" %u > /dev/null 2>&1"; open-in-browser; set browser "xdg-open %u";
+
+# audio
+macro a set browser "mpv --vid=no --"; one; set browser "xdg-open %u";
+
+#firefox
+macro f set browser "setsid --fork firefox %u > /dev/null 2>&1"; open-in-browser; set browser "xdg-open %u";
+
+macro t set browser "alacritty -e lynx %u &"; open-in-browser;
+
+macro y set browser "yt-dlp  %u > /dev/null 2>&1"; open-in-browser; set browser "xdg-open %u";

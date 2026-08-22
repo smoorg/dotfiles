@@ -1,0 +1,17 @@
+#!/bin/sh
+
+spawnOnTag () {
+    tag=$1
+    cmd=$2
+
+    riverctl spawn "$cmd"
+    sleep 1s
+    riverctl set-view-tags "$tag"
+    sleep 1s
+}
+spawnOnTag "000000010" "firefox"
+spawnOnTag "000000010" "slack"
+spawnOnTag "000000100" "firdef"
+spawnOnTag "000000100" "fluffychat"
+spawnOnTag "100000000" "keepassxc"
+spawnOnTag "000000001" "$TERMINAL -e tmux"

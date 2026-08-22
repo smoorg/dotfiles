@@ -148,7 +148,7 @@ riverctl border-color-unfocused 0x586e75
 riverctl set-repeat 50 300
 
 # Make all views with an app-id that starts with "float" and title "foo" start floating.
-riverctl rule-add -app-id 'float*' -title 'foo' float
+riverctl rule-add -app-id 'float*' -title 'pavucontrol' float
 
 # Make all views with app-id "bar" and any title use client-side decorations
 riverctl rule-add -app-id "bar" csd
