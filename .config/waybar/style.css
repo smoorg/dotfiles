@@ -9,10 +9,10 @@
 }
 
 .modules-right {
-    margin: 5px;
 }
-.modules-center, .modules-middle {
-    margin: 5px;
+.modules-right, .modules-center, .modules-middle {
+    margin-top: -50px;
+    margin-bottom: -50px;
 }
 
 window#waybar {
@@ -50,6 +50,8 @@ window#waybar {
 }
 
 #custom-weather {
+    /* margin-top: 50px; */
+    padding: 50px 0;
     /*margin-top: 10px;*/
     /* padding: 0.3rem 0.6rem; */
     /* margin: 0.4rem 0.25rem; */
