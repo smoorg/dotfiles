@@ -136,7 +136,7 @@ do
     riverctl map $mode None XF86MonBrightnessUp   spawn 'light 5'
     riverctl map $mode None XF86MonBrightnessDown spawn 'light -5'
 
-    riverctl map $mode None XF86PrintScreen spawn 'screenshot'
+    riverctl map $mode None XF86PrintScreen spawn 'screenshot -s'
 done
 
 # Set background and border color
@@ -167,6 +167,8 @@ riverctl spawn waybar
 
 # screenshot
 riverctl map normal Super+Shift S spawn 'screenshot'
+riverctl map normal Super+Alt+Shift S spawn 'screenshot -s'
+
 riverctl map normal Super+Shift R spawn 'record'
 
 # lang
@@ -191,4 +193,5 @@ wlr-randr --output eDP-1 --scale 2
 external_screen=$(wlr-randr | grep "^DP-" | cut -d " " -f1)
 internal_screen=$(wlr-randr | grep "^eDP-" | cut -d " " -f1)
 [ -n "$internal_screen" -a -n "$external_screen" ] && wlr-randr --output $external_screen --right-of $internal_screen
+
 setwall
