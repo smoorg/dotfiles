@@ -1,17 +1,18 @@
 [colors.primary]
 background = "#000000"
+# foreground = "#ffbf00"
 
 [font]
-size = 13
+size = 15
 
 [font.bold]
-family = "JetBrains Mono Nerd Font"
+family = "Berkeley Mono Bold"
 
 [font.italic]
-family = "JetBrains Mono Nerd Font"
+family = "Berkeley Mono Italic"
 
 [font.normal]
-family = "JetBrains Mono Nerd Font"
+family = "Berkeley Mono"
 
 [[keyboard.bindings]]
 action = "IncreaseFontSize"
