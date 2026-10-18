@@ -3,7 +3,7 @@ application/json=nvim.desktop;
 application/rss+xml=firefox.desktop;
 application/octet-stream=firefox.desktop;
 application/x-remmina=org.remmina.Remmina.desktop;
-application/pdf=mupdf.desktop;
+application/pdf=mupdf.desktop;zathura.desktop;xreader.desktop;
 application/msword=libreoffice-writter.desktop;docx2text;
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writter.desktop;docx2text;
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writter.desktop;docx2text;
@@ -21,8 +21,10 @@ x-scheme-handler/vnc=org.remmina.Remmina.desktop;
 x-scheme-handler/remmina=org.remmina.Remmina.desktop;
 x-scheme-handler/http=firefox.desktop;
 x-scheme-handler/https=firefox.desktop;
-x-scheme-handler/msteams=firefox.desktop
-x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
-x-scheme-handler/tg=org.telegram.desktop.desktop;
-x-scheme-handler/tonsite=org.telegram.desktop.desktop
+x-scheme-handler/msteams=firefox.desktop;
+x-scheme-handler/jetbrains=jetbrains-toolbox.desktop;
+x-scheme-handler/tg=org.telegram.desktop;
+x-scheme-handler/tonsite=org.telegram.desktop;
 x-scheme-handler/slack=slack.desktop
+
+[Added Associations]

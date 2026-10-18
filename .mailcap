@@ -1,0 +1,3 @@
+text/calendar; calcurse -i %s
+application/ics; calcurse -i %s
+application/pdf; xreader %s
